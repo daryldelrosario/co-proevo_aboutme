@@ -7,7 +7,7 @@ About me page describing my interests, hobbies, work and personal achievements. 
 ## Releases
 <details>
     <summary>v0.1.0 - Jan 21 2023</sumary>
-
+    
 - First design using HTML only with in-line CSS
 - Check out full release notes <a href="https://github.com/daryldelrosario/co-aboutme_pro-four/releases/tag/v0.1.0">here</a>
 </details>
