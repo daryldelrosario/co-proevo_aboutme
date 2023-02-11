@@ -4,7 +4,10 @@ About me page describing my interests, hobbies, work and personal achievements. 
 ## <a href="https://daryldelrosario.github.io/co-about-me/">Current Live Demo</a>
 <kbd><a href="https://daryldelrosario.github.io/co-about-me/"><img src="./img/2023-Jan-23-update.png" alt="live demo update"></kbd>
 
-## Updates
-### Saturday, January 21, 2023 @ 152pm
-* Completed HTML only with in-line CSS
-<kbd><img src="co-about-me-ld.gif" alt="live demo gif"></kbd>
+## Releases
+<details>
+    <summary>v0.1.0 - Jan 21 2023</sumary>
+
+- First design using HTML only with in-line CSS
+- Check out full release notes <a href="https://github.com/daryldelrosario/co-aboutme_pro-four/releases/tag/v0.1.0">here</a>
+</details>
