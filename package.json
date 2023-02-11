@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/daryldelrosario/co-aboutme_pro-four#readme",
   "dependencies": {
-    "bootstrap": "^5.3.0-alpha1",
+    "bootstrap": "^5.3.0-alpha1"
+  },
+  "devDependencies": {
     "dart-sass": "^1.25.0"
   }
 }
