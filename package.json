@@ -1,0 +1,30 @@
+{
+  "name": "co-aboutme_pro-four",
+  "version": "1.0.0",
+  "description": "About me page describing my interests, hobbies, work and personal achievements. Also includes some of my goals at the bottom of the page.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daryldelrosario/co-aboutme_pro-four.git"
+  },
+  "keywords": [
+    "SASS",
+    "Media Query",
+    "CSS Animation",
+    "Advanced Grid",
+    "Flexbox",
+    "Bootstrap"
+  ],
+  "author": "Daryl del Rosario",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daryldelrosario/co-aboutme_pro-four/issues"
+  },
+  "homepage": "https://github.com/daryldelrosario/co-aboutme_pro-four#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.0-alpha1"
+  }
+}
