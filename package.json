@@ -1,7 +1,7 @@
 {
   "name": "co-aboutme_pro-four",
   "version": "1.0.0",
-  "description": "About me page describing my interests, hobbies, work and personal achievements. Also includes some of my goals at the bottom of the page.",
+  "description": "Correlation One Project Four. Taking our intial About Me page and extending it with advanced frontend tools and frameworks.",
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass --watch scss:assets/css"
