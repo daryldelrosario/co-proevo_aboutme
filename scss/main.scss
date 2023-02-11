@@ -1,4 +1,6 @@
+@use "./config/" as *;
+
 body {
-    background-color: black;
-    color: red;
+    background-color: yellowgreen;
+    color: orangered;
 }
