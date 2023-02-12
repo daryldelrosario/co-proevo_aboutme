@@ -11608,6 +11608,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  border: none;
+}
+
 body {
   background-color: yellowgreen;
   color: orangered;

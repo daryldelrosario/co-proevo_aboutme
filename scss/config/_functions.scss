@@ -1,0 +1,8 @@
+// Toggles universal border for visual aide
+@function visualAide($toggle) {
+    @if $toggle {
+        @return 1px solid red;
+    } @else {
+        @return none;
+    }
+}

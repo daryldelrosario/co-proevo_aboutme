@@ -1,5 +1,12 @@
 @use "./config/" as *;
 
+// Internal Variable used by dev. To turn visual aide on $toggle = true. Otherwise $toggle = false
+$toggle: false;
+
+* {
+    border: visualAide($toggle);
+}
+
 body {
     background-color: yellowgreen;
     color: orangered;
