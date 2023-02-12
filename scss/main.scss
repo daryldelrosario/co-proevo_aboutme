@@ -1,6 +1,6 @@
 @use "./config/" as *;
 
-// Internal Variable used by dev. To turn visual aide on $toggle = true. Otherwise $toggle = false
+// For visual aide - set $toggle true. Otherwise $toggle false
 $toggle: false;
 
 * {
@@ -8,6 +8,6 @@ $toggle: false;
 }
 
 body {
-    background-color: yellowgreen;
-    color: orangered;
+    @extend %gradient;
+    color: $light-tone;
 }
