@@ -1,11 +1,5 @@
 @use "./config/" as *;
-
-// For visual aide - set $toggle true. Otherwise $toggle false
-$toggle: false;
-
-* {
-    border: visualAide($toggle);
-}
+@use "./sections/" as *;
 
 body {
     @extend %gradient;
