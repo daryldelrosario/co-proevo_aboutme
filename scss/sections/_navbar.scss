@@ -2,8 +2,14 @@
 
 nav {
     @extend %gradient;
+    
     img {
         width: 6rem;
         height: 3rem;
     }
+}
+
+.nav-link {
+    font-size: 1.11rem;
+    margin-right: 0.875rem;
 }

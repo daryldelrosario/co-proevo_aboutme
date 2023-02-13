@@ -11641,6 +11641,11 @@ nav img {
   height: 3rem;
 }
 
+.nav-link {
+  font-size: 1.11rem;
+  margin-right: 0.875rem;
+}
+
 #music-toggle {
   display: none;
 }
@@ -11664,9 +11669,16 @@ nav img {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 18px;
   color: white;
   cursor: pointer;
+}
+#hide-player-btn i {
+  font-size: 2rem;
+  transition: scale 0.33s ease-in-out, color 0.33s ease-in-out;
+}
+#hide-player-btn i:hover {
+  scale: 1.1;
+  color: red;
 }
 
 #music-player {
@@ -11680,4 +11692,18 @@ nav img {
   width: 90%;
   height: 90%;
   border: none;
+}
+
+#show-player-btn {
+  position: relative;
+}
+#show-player-btn i {
+  font-size: 1.11rem;
+  transition: scale 0.33s ease-in, color 0.33s ease-in-out;
+  color: #fff;
+}
+#show-player-btn i:hover {
+  scale: 1.1;
+  color: green;
+  cursor: pointer;
 }

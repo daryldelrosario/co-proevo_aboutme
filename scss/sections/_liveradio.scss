@@ -25,9 +25,18 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 18px;
     color: white;
     cursor: pointer;
+
+    i {
+        font-size: 2rem;
+        transition: scale 0.33s ease-in-out, color 0.33s ease-in-out;
+
+        &:hover {
+            scale: 1.1;
+            color: red;
+        }
+    }
 }
 
 #music-player {
@@ -41,5 +50,21 @@
         width: 90%;
         height: 90%;
         border: none;
+    }
+}
+
+#show-player-btn {
+    position: relative;
+
+    i {
+        font-size: 1.11rem;
+        transition: scale 0.33s ease-in, color 0.33s ease-in-out;
+        color: $white;
+
+        &:hover {
+            scale: 1.1;
+            color: green;
+            cursor: pointer;
+        }
     }
 }
