@@ -56,11 +56,27 @@
                 </ul>
 
                 <!-- Toggle for music player -->
-                <input type="checkbox" id="music-toggle">
-                <label for="music-toggle" id="show-player-btn" onclick="document.getElementById('music-container').classList.add('show')">
-                    <i class="fa-solid fa-volume-high"></i>
-                </label>
+                <div class="toggle-box">
+                    <input type="checkbox" id="music-toggle">
+                    <span>
+                        <label for="music-toggle" id="show-player-btn" onclick="document.getElementById('music-container').classList.add('show')">
+                            <span class="volume-animation">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </span>
+                            <span class="main-volume">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </span>
 
+                            
+                            
+
+                            
+                        </label>
+                    </span>
+                    <span class="play-music-animation"></span>
+                    
+                </div>
+                
             </div>
         </div>
     </nav>

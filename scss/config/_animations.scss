@@ -16,3 +16,16 @@
         left: -100%;
     }
 }
+
+// Pulse radio toggle button
+@keyframes pulse-volume {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0.12;
+    }
+}

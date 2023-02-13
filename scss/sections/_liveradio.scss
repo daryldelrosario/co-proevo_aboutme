@@ -4,6 +4,37 @@
     display: none;
 }
 
+.toggle-box {
+    #show-player-btn {
+        position: relative;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .volume-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: pulse-volume 1.5s ease-in-out infinite;
+
+            i {
+                color: $light-tone;
+            }
+        }
+    
+        .main-volume {
+            position: relative;
+    
+            i {
+                color: $white;
+            }
+        }
+    }    
+
+    
+}
+
 #music-container {
     position: fixed;
     top: 0;
@@ -50,21 +81,5 @@
         width: 90%;
         height: 90%;
         border: none;
-    }
-}
-
-#show-player-btn {
-    position: relative;
-
-    i {
-        font-size: 1.11rem;
-        transition: scale 0.33s ease-in, color 0.33s ease-in-out;
-        color: $white;
-
-        &:hover {
-            scale: 1.1;
-            color: green;
-            cursor: pointer;
-        }
     }
 }
