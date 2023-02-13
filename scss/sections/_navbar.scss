@@ -1,6 +1,7 @@
 @use "../config/" as *;
 
 nav {
+    @extend %gradient;
     img {
         width: 6rem;
         height: 3rem;

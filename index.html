@@ -8,14 +8,19 @@
 
     <!-- Bootstrap v5.3.0-alpha1 CSS via SASS -->
     <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- Custom Fontawesome SASS -->
+    <link rel="stylesheet" href="./assets/css/fontawesome.css">
     <title>About Daryl</title>
 </head>
 
 <body>
     <!-- START LIVE RADIO SECTION -->
     <div id="music-container">
+        <label for="music-toggle" id="hide-player-btn">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </label>
         <div id="music-player">
-            <iframe src="https://online-radio-canada.com/kiss-925" frameborder="0"></iframe>
+                <iframe src="https://online-radio-canada.com/kiss-925" frameborder="0"></iframe>
         </div>
     </div>
 
@@ -47,10 +52,12 @@
                         <a class="nav-link" href="#">Goals</a>
                     </li>
                 </ul>
-                <input type="checkbox" id="music-toggle">
-                <label for="music-toggle" id="music-toggle-label">
-                    <span>Toggle Music</span>
-                </label>
+
+                <!-- Toggle on for music player -->
+                <!-- <input type="checkbox" id="music-toggle">
+                <label for="music-toggle" id="show-player-btn">
+                    Show Player
+                </label> -->
 
             </div>
         </div>
