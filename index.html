@@ -16,8 +16,8 @@
 <body>
     <!-- START LIVE RADIO SECTION -->
     <div id="music-container">
-        <label for="music-toggle" id="hide-player-btn">
-            <i class="fa-regular fa-circle-xmark"></i>
+        <label for="music-toggle" id="hide-player-btn" onclick="document.getElementById('music-container').classList.remove('show')">
+            <i class="fa-regular fa-circle-xmark"></i> 
         </label>
         <div id="music-player">
                 <iframe src="https://online-radio-canada.com/kiss-925" frameborder="0"></iframe>
@@ -54,10 +54,10 @@
                 </ul>
 
                 <!-- Toggle on for music player -->
-                <!-- <input type="checkbox" id="music-toggle">
-                <label for="music-toggle" id="show-player-btn">
-                    Show Player
-                </label> -->
+                <input type="checkbox" id="music-toggle">
+                <label for="music-toggle" id="show-player-btn" onclick="document.getElementById('music-container').classList.add('show')">
+                    <i class="fa-solid fa-volume-high"></i>
+                </label>
 
             </div>
         </div>
