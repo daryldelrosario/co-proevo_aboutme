@@ -11690,7 +11690,6 @@ nav img {
   height: 100%;
   transform: translateX(-100%);
   background-color: black;
-  z-index: 9999;
   transition: transform 0.5s ease-in-out;
 }
 #music-container.show {
