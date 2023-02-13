@@ -1,7 +1,2 @@
 @use "./config/" as *;
 @use "./sections/" as *;
-
-body {
-    @extend %gradient;
-    color: $light-tone;
-}

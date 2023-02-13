@@ -11608,10 +11608,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-body {
-  background: linear-gradient(to right, rgba(235, 73, 58, 0.95), rgba(255, 188, 71, 0.95));
-}
-
 * {
   border: none;
 }
@@ -11619,8 +11615,4 @@ body {
 nav img {
   width: 6rem;
   height: 3rem;
-}
-
-body {
-  color: rgb(240, 204, 176);
 }
