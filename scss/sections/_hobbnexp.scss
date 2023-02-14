@@ -1,0 +1,5 @@
+@use "../config/" as *;
+
+.hobb-n-exp {
+    @extend %main-text;
+}
