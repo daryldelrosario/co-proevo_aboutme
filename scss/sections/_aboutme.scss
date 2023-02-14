@@ -34,9 +34,12 @@ header {
         }
 
         &:hover {
+            cursor: crosshair;
+
             &::after {
                 top: 0;
-                opacity: 0.77;
+                opacity: 0.88;
+
             }
         }
 
