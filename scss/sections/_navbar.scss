@@ -1,6 +1,10 @@
 @use "../config/" as *;
 
 nav {
+    * {
+        font-family: "Nunito", sans-serif;
+    }
+    
     @extend %gradient;
     
     img {

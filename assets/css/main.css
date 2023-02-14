@@ -11616,18 +11616,14 @@ header, nav {
   color: rgb(84, 79, 77);
 }
 
-header .about-me__content-container {
+.achievements__item-overlay, header .about-me__content-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .about-me::after, header .about-me__content-container {
+.achievements__item-overlay, header .about-me::after, header .about-me__content-container {
   transition: all 0.5s ease-in-out;
-}
-
-header .about-me__content h1, header .about-me__content .about-me__p p {
-  font-family: "Poppins", sans-serif;
 }
 
 @keyframes slide-in {
@@ -11657,11 +11653,11 @@ header .about-me__content h1, header .about-me__content .about-me__p p {
   }
 }
 * {
-  border: none;
+  border: 1px solid red;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -11669,6 +11665,9 @@ body {
   color: #fff;
 }
 
+nav * {
+  font-family: "Nunito", sans-serif;
+}
 nav img {
   width: 6rem;
   height: 3rem;
@@ -11813,4 +11812,35 @@ header .about-me__content .about-me__p p {
 }
 header svg {
   padding-top: 3rem;
+}
+
+.achievements__grid {
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 1fr));
+  grid-gap: 2rem;
+}
+.achievements__item {
+  position: relative;
+  border-top: 5px solid #eb493a;
+  overflow: hidden;
+}
+.achievements__item img {
+  width: 100%;
+}
+.achievements__item-overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-100%);
+  padding: 1.11rem;
+  background-color: rgba(235, 73, 58, 0.88);
+}
+.achievements__item:hover .achievements__item-overlay {
+  transform: translateY(0);
+  cursor: crosshair;
 }

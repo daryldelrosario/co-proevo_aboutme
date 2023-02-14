@@ -1,14 +1,14 @@
 @use "../config/" as *;
 
 // Set $toggle true to turn on visual aide - otherwise $toggle false
-$toggle: false;
+$toggle: true;
 
 * {
     border: visualAide($toggle);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Nunito", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {

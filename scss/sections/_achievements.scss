@@ -1,0 +1,43 @@
+@use "../config/" as *;
+
+.achievements {
+
+    &__grid {
+        margin: 0 auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 1fr));
+        grid-gap: 2rem;
+    }
+
+    &__item {
+        position: relative;
+        border-top: 5px solid $primary;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+        &-overlay {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            transform: translateY(-100%);
+            padding: 1.11rem;
+            @extend %flex-rowcen;
+            @extend %transition;
+            background-color: rgba($primary, 0.88);
+        }
+
+        &:hover .achievements__item-overlay {
+            transform: translateY(0);
+            cursor: crosshair;
+        }
+    }
+
+
+}
