@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- START LIVE RADIO SECTION -->
+    <!-- START LIVE RADIO SECTION OVERLAY -->
     <div id="music-container">
         <label for="music-toggle" id="hide-player-btn"
             onclick="document.getElementById('music-container').classList.remove('show')">
@@ -26,6 +26,17 @@
         </label>
         <div id="music-player">
             <iframe src="https://online-radio-canada.com/kiss-925" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <!-- START GOAL SECTION OVERLAY -->
+    <div id="goals-container" class="goals-container">
+        <label for="goals-toggle" id="hide-goals-btn"
+            onclick="document.getElementById('goals-container').classList.remove('show')">
+            <i class="fa-regular fa-circle-xmark"></i>
+        </label>
+        <div class="goals-container__content">
+            These are my goals!
         </div>
     </div>
 
@@ -53,10 +64,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Achievements</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Goals</a>
-                    </li>
                 </ul>
+
+                <!-- Toggle for goals section -->
+                <div class="toggle-box">
+                    <input type="checkbox" id="goals-toggle">
+                    <span>
+                        <label for="goals-toggle" id="show-goals-btn"
+                            onclick="document.getElementById('goals-container').classList.add('show')">
+                            <span class="volume-animation">
+                                <i class="fa-solid fa-medal"></i>
+                            </span>
+                            <span class="main-volume">
+                                <i class="fa-solid fa-medal"></i>
+                            </span>
+                        </label>
+                    </span>
+                    <span class="play-goals-animation"></span>
+                </div>
 
                 <!-- Toggle for music player -->
                 <div class="toggle-box">
@@ -109,7 +134,7 @@
 
 
     <!-- START HOBBIES AND EXPERIENCE SECTION -->
-    <section id="hobb-n-exp" class="hobb-n-exp">
+    <section id="hobb-n-exp" class="hobb-n-exp container">
         <h2>Family Time, Extreme Activities and Travelling.</h2>
 
         <!-- START HOBBIES SECTION -->
@@ -200,6 +225,7 @@
 
     <!-- START ACHIEVEMENTS SECTION -->
     <section id="achievements" class="achievements container">
+        <h2>Work Related and Personal Achievements</h2>
         <article class="achievements__grid">
             <div class="achievements__item">
                 <img src="./assets/img/daryl_work-1.png" alt="daryl and wife jumping in front of queensland university australia in grad gown">
@@ -240,9 +266,21 @@
         </article>
     </section>
 
-    <!-- START GOALS SECTION -->
-    <section id="goals" class="goals">
-        Flex center start icon. To pop out from right hidden goals for Health Wealth and Love.
+    <!-- START BOTTOM GOALS SECTION TOGGLE -->
+    <section id="goals" class="goals container">
+        <h2>Goals</h2>
+        <div class="toggle-box">
+            <input type="checkbox" id="goals-toggle">
+            <span>
+                <label for="goals-toggle" id="show-goals-btn"
+                    onclick="document.getElementById('goals-container').classList.add('show')">
+                    <div class="goals__icon">
+                        <i class="fa-solid fa-medal"></i>
+                    </div>
+                </label>
+            </span>
+            <span class="play-goals-animation"></span>
+        </div>
     </section>
 
 
@@ -251,46 +289,8 @@
         Footer Here.
     </footer>
 
-    <!-- Work and personal achievements section-->
-    <!-- <h2 style="background-color: #FFF2F2">Work and Personal Achievements</h2> -->
-    <!-- Work achievements -->
-    <!-- <h3 style="background-color: #E5E0FF">Work Related</h3>
-    <div>
-        <img src="./assets/img/australia-grad-2011.jpg" alt="Graduating teachers college in Australia"
-            style="height: 200px">
-    </div>
-    <p>
-        My work experience ranges from acting in Halloween Haunt to being a teacher for senior maths division. I've also
-        worked at:
-    <ul>
-        <li>Several fast food chains</li>
-        <li>Woodie Wood Chucks as a magician</li>
-        <li>Landscaping</li>
-        <li>Human Resources to name a few ... </li>
-    </ul>
-    More on my work history can be found at <a href="https://www.linkedin.com/in/daryldelrosario/">LinkedIn</a>.
-    </p> -->
-
-    <!-- Personal achievements -->
-    <!-- <h3 style="background-color: #E5E0FF">Personal Achievements</h3>
-    <div>
-        <img src="./assets/img/jump-wedding.jpg"
-            alt="Jumping in front of a scenic view in our Mexico destination wedding" style="height: 200px">
-    </div>
-    <p>
-        Some of the wildest personal experiences include skydiving and black water rafing to getting married to my
-        beautiful wife in Mexico. I've also:
-    <ul>
-        <li>Travelled to Lebanon, Iceland, Portugal and Philippines</li>
-        <li>Walked on the edge of the CN Tower</li>
-        <li>Bungee jumped between two mountains</li>
-        <li>Having our first son in 2022 to name a few ... </li>
-    </ul>
-    Life is a beautiful thing! Find out more on my <a href="https://www.instagram.com/dnaxdr9407/">Instagram</a>.
-    </p> -->
-
     <!-- Goal section -->
-    <h2 style="background-color: #FFF2F2">Goals</h2>
+    <!-- <h2 style="background-color: #FFF2F2">Goals</h2>
     <p>
         Ultimately, I would love to become a millionaire. But until then I'm happy with:
     <ul>
@@ -298,7 +298,7 @@
         <li>Becoming more time free so that I can spend more time with my family</li>
         <li>Take my immediate family on a vacation to Moon Palace - Jamaica</li>
     </ul>
-    </p>
+    </p> -->
 
     <!-- Simple personal footer -->
     <footer style="background-color: black; color: white; text-align: center; font-size: 18px; padding: 7px">

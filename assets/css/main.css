@@ -11608,21 +11608,17 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-header, nav {
+.goals__icon i, header, nav {
   background: linear-gradient(to right, rgba(235, 73, 58, 0.95), rgba(255, 188, 71, 0.95));
 }
 
-.hobb-n-exp {
-  color: rgb(84, 79, 77);
-}
-
-.achievements__item-overlay, header .about-me__content-container {
+.goals-container, .goals__icon, .achievements__item-overlay, header .about-me__content-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.achievements__item-overlay, header .about-me::after, header .about-me__content-container {
+.goals-container, .goals__icon i, .achievements__item-overlay, header .about-me::after, header .about-me__content-container {
   transition: all 0.5s ease-in-out;
 }
 
@@ -11653,7 +11649,7 @@ header, nav {
   }
 }
 * {
-  border: 1px solid red;
+  border: none;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -11705,6 +11701,7 @@ nav img {
 }
 
 #music-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -11843,4 +11840,82 @@ header svg {
 .achievements__item:hover .achievements__item-overlay {
   transform: translateY(0);
   cursor: crosshair;
+}
+
+#goals-toggle {
+  display: none;
+}
+
+.toggle-box {
+  margin: 0 0.77rem;
+}
+.toggle-box #show-goals-btn {
+  position: relative;
+}
+.toggle-box #show-goals-btn:hover {
+  cursor: pointer;
+}
+.toggle-box #show-goals-btn .volume-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pulse-volume 1.5s ease-in-out infinite;
+}
+.toggle-box #show-goals-btn .volume-animation i {
+  color: #f0ccb0;
+}
+.toggle-box #show-goals-btn .main-volume {
+  position: relative;
+}
+.toggle-box #show-goals-btn .main-volume i {
+  color: #fff;
+}
+
+.goals-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 3rem;
+  z-index: 99999;
+  background-color: rgba(235, 73, 58, 0.88);
+}
+.goals-container.show {
+  transform: translateX(0);
+}
+
+#hide-goals-btn {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  color: white;
+  cursor: pointer;
+}
+#hide-goals-btn i {
+  font-size: 2rem;
+  transition: scale 0.33s ease-in-out, color 0.33s ease-in-out;
+}
+#hide-goals-btn i:hover {
+  scale: 1.1;
+  color: red;
+}
+
+.goals {
+  height: 30vh;
+}
+.goals__icon {
+  height: 100%;
+}
+.goals__icon i {
+  font-size: 9rem;
+  border-radius: 0.88rem;
+}
+.goals__icon i:hover {
+  scale: 1.11;
+  box-shadow: 0 0 22px rgba(235, 73, 58, 0.98);
+  cursor: pointer;
+}
+.goals__overlay {
+  position: relative;
 }

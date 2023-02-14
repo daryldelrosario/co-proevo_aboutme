@@ -1,11 +1,12 @@
 @use "../config/" as *;
-
-#music-toggle {
+#goals-toggle {
     display: none;
 }
 
 .toggle-box {
-    #show-player-btn {
+    margin: 0 0.77rem;
+
+    #show-goals-btn {
         position: relative;
 
         &:hover {
@@ -33,27 +34,28 @@
     }    
 }
 
-#music-container {
-    display: none;
+.goals-container {
     position: fixed;
+    // transform: translateX(100%);
     top: 0;
-    left: 0;
-    width: 100%;
+    right: 0;
     height: 100%;
-    transform: translateX(-100%);
-    background-color: rgba($black, 0.88);
+    width: 100%;
+    font-size: 3rem;
     z-index: 99999;
-    transition: transform 0.5s ease-in-out;
-    
+    background-color: rgba($primary, 0.88);
+    @extend %flex-rowcen;
+    @extend %transition;
+
     &.show {
         transform: translateX(0);
     }
 }
 
-#hide-player-btn {
+#hide-goals-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 0;
+    right: 5%;
     color: white;
     cursor: pointer;
 
@@ -68,18 +70,28 @@
     }
 }
 
-#music-player {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.goals {
+    height: 30vh;
 
-    iframe {
-        width: 88%;
-        height: 77%;
-        border: none;
-        border-radius: 0.44rem;
-        box-shadow: 0 0 22px rgba($white, 0.88);
+    &__icon {
+        height: 100%;
+        @extend %flex-rowcen;
+        
+        i {
+            font-size: 9rem;
+            border-radius: 0.88rem;
+            @extend %gradient;
+            @extend %transition;
+
+            &:hover {
+                scale: (1.11);
+                box-shadow: 0 0 22px rgba($primary, 0.98);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__overlay {
+        position: relative;
     }
 }
