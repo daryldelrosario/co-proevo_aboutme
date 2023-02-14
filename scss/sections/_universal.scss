@@ -9,5 +9,9 @@ $toggle: true;
     margin: 0;
     box-sizing: border-box;
     font-family: "Nunito", sans-serif;
+}
+
+body {
+    background-color: $light-tone;
     color: $white;
 }

@@ -61,12 +61,18 @@ header {
 
             h1 {
                 font-size: 4.44rem;
-                text-shadow: 0 0 22px rgba($white, 0.98);
+                text-shadow: 0 0 22px rgba($white, 0.98);@extend %poppins;
             }
 
             .about-me__p {
                 font-size: 1.43rem;
-                padding: 0 9rem;
+                width: 88%;
+                margin: 0 auto;
+                
+                p {
+                    text-align: justified;
+                    @extend %poppins;
+                }
             }
         }
     }

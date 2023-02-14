@@ -17,3 +17,11 @@
 %transition {
     transition: all 0.5s ease-in-out;
 }
+
+%poppins {
+    font-family: "Poppins", sans-serif;
+}
+
+@mixin main-text {
+    color: $dark-tone;
+}
