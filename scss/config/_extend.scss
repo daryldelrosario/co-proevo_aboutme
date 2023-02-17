@@ -1,19 +1,18 @@
 @use "./custom" as *;
 
+// Background gradient using primary and secondary color
 %gradient {
     background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
 }
 
-%main-text {
-    color: $dark-tone;
-}
-
+// Flex center w/ direction row
 %flex-rowcen {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+// Simple transition 
 %transition {
     transition: all 0.5s ease-in-out;
 }

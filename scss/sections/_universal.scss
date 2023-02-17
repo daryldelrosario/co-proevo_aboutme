@@ -1,7 +1,7 @@
 @use "../config/" as *;
 
 // Set $toggle true to turn on visual aide - otherwise $toggle false
-$toggle: false;
+$toggle: true;
 
 * {
     border: visualAide($toggle);
@@ -14,4 +14,30 @@ $toggle: false;
 body {
     background-color: $background;
     color: $foreground;
+}
+
+h2 {
+    padding: 1rem 1rem 0 1rem;
+    text-align: center;
+}
+
+// Heading line
+.heading-line::before {
+    content: "";
+    width: 44%;
+    height: 0.1rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $primary;
+}
+
+.heading-line::after {
+    content: "";
+    width: 4%;
+    padding-top: 0.5rem;
+    height: 0.2rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: $primary;
 }

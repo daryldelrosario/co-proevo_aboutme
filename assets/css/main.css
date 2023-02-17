@@ -11649,7 +11649,7 @@ textarea.form-control-lg {
   }
 }
 * {
-  border: none;
+  border: 1px solid red;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -11659,6 +11659,31 @@ textarea.form-control-lg {
 body {
   background-color: #ffbc47;
   color: #fff;
+}
+
+h2 {
+  padding: 1rem 1rem 0 1rem;
+  text-align: center;
+}
+
+.heading-line::before {
+  content: "";
+  width: 44%;
+  height: 0.1rem;
+  display: block;
+  margin: 0 auto;
+  background-color: #eb493a;
+}
+
+.heading-line::after {
+  content: "";
+  width: 4%;
+  padding-top: 0.5rem;
+  height: 0.2rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background-color: #eb493a;
 }
 
 nav * {
