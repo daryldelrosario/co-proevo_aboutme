@@ -1,5 +1,13 @@
 @use "../config/" as *;
 
+#link-hobbies {
+    padding: 3rem;
+}
+
+#link-experiences {
+    padding: 4rem;
+}
+
 .hobb-n-exp {
 
     &__content-container {

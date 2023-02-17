@@ -1,10 +1,14 @@
 @use "../config/" as *;
 
+#link-achievements {
+    padding: 2rem;
+}
+
 .achievements {
     @extend %gradient;
 
     &__grid {
-        padding: 2rem 0 3rem 0;
+        padding: 0 0 3rem 0;
         margin: 0 auto;
         width: 97%;
         display: grid;
@@ -16,6 +20,12 @@
         position: relative;
         border-top: 5px solid $primary;
         overflow: hidden;
+        @extend %transition;
+
+        &:hover {
+            cursor: crosshair;
+            box-shadow: 0 0 22px rgba($white, 88);
+        }
 
         img {
             width: 100%;
@@ -37,7 +47,6 @@
 
         &:hover .achievements__item-overlay {
             transform: translateY(0);
-            cursor: crosshair;
         }
     }
 
