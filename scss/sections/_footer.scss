@@ -1,0 +1,9 @@
+@use "../config/" as *;
+
+footer {
+    font-size: 1.43rem;
+    background-color: $black;
+    color: $white;
+    padding: 1rem;
+    text-align: center;
+}
