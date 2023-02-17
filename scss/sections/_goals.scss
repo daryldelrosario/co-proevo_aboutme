@@ -3,6 +3,10 @@
     display: none;
 }
 
+#link-goals {
+    padding: 2rem;
+}
+
 .toggle-box {
     margin: 0 0.77rem;
 
@@ -72,7 +76,12 @@
 }
 
 .goals {
-    height: 30vh;
+    padding-bottom: 7rem;
+
+    .toggle-box {
+        padding-top: 1rem;
+        text-align: center;
+    }
 
     &__icon {
         height: 100%;

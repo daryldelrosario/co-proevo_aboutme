@@ -11649,7 +11649,7 @@ textarea.form-control-lg {
   }
 }
 * {
-  border: 1px solid black;
+  border: none;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -11727,7 +11727,6 @@ nav img {
 }
 
 #music-container {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -11911,6 +11910,10 @@ header svg {
   display: none;
 }
 
+#link-goals {
+  padding: 2rem;
+}
+
 .toggle-box {
   margin: 0 0.77rem;
 }
@@ -11968,7 +11971,11 @@ header svg {
 }
 
 .goals {
-  height: 30vh;
+  padding-bottom: 7rem;
+}
+.goals .toggle-box {
+  padding-top: 1rem;
+  text-align: center;
 }
 .goals__icon {
   height: 100%;
