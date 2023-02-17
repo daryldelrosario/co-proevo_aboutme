@@ -39,28 +39,106 @@
 }
 
 .goals-container {
+    border: 3px red solid;
     position: fixed;
-    // transform: translateX(100%);
-    display: none;
+    transform: translateX(100%);
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
-    font-size: 3rem;
     z-index: 99999;
     background-color: rgba($primary, 0.88);
     @extend %flex-rowcen;
     @extend %transition;
 
+    &__header {
+        font-size: 1.43rem;
+        text-align: center;
+        padding: 3rem;
+    }
+
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &.show {
         transform: translateX(0);
     }
+
+    .goals__grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        gap: 2%;
+        margin: 0 auto;
+    }
+
+    .goal-card {
+        
+        &__bg {
+            width: 29vw;
+            height: 50vh;
+            border-radius: 11px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: all 0.2s ease-in-out;
+            filter: brightness(0.5) blur(11px);
+
+            &-1 {
+                background-image: url("../../assets/img/goal-health.png");
+                
+            }
+    
+            &-2 {
+                background-image: url("../../assets/img/goal-wealth.png");
+            }
+    
+            &-3 {
+                background-image: url("../../assets/img/goal-love.png");
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: crosshair;
+                filter: brightness(100%) blur(0);
+            }
+        }
+
+        &__content {
+            position: absolute;
+            top: 0;
+            padding: 1.11rem;
+            height: 100%;
+            text-align: center;
+            font-size: 1.11rem;
+            @extend %flex-rowcen;
+
+            p {
+                padding: 0.875rem;
+                border-radius: 7px;
+                background-color: rgba($primary, 0.77);
+                opacity: 0;
+            }
+
+            &:hover p {
+                opacity: 1;
+            }
+        }
+    }
+
+
 }
 
 #hide-goals-btn {
     position: absolute;
-    top: 0;
-    right: 5%;
+    top: 2%;
+    right: 2%;
     color: white;
     cursor: pointer;
 

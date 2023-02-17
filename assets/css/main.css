@@ -11612,7 +11612,7 @@ textarea.form-control-lg {
   background: linear-gradient(to right, rgba(235, 73, 58, 0.95), rgba(255, 188, 71, 0.95));
 }
 
-.goals-container, .goals__icon, .achievements__item-overlay, .hobb-n-exp__content-container, .hobb-n-exp__content, header .about-me__content-container {
+.goals-container, .goals-container .goal-card__content, .goals__icon, .achievements__item-overlay, .hobb-n-exp__content-container, .hobb-n-exp__content, header .about-me__content-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11940,24 +11940,85 @@ header svg {
 }
 
 .goals-container {
+  border: 3px red solid;
   position: fixed;
-  display: none;
+  transform: translateX(100%);
   top: 0;
   right: 0;
   height: 100%;
   width: 100%;
-  font-size: 3rem;
   z-index: 99999;
   background-color: rgba(235, 73, 58, 0.88);
+}
+.goals-container__header {
+  font-size: 1.43rem;
+  text-align: center;
+  padding: 3rem;
+}
+.goals-container__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .goals-container.show {
   transform: translateX(0);
 }
+.goals-container .goals__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  gap: 2%;
+  margin: 0 auto;
+}
+.goals-container .goal-card__bg {
+  width: 29vw;
+  height: 50vh;
+  border-radius: 11px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  filter: brightness(0.5) blur(11px);
+}
+.goals-container .goal-card__bg-1 {
+  background-image: url("../../assets/img/goal-health.png");
+}
+.goals-container .goal-card__bg-2 {
+  background-image: url("../../assets/img/goal-wealth.png");
+}
+.goals-container .goal-card__bg-3 {
+  background-image: url("../../assets/img/goal-love.png");
+}
+.goals-container .goal-card__bg:hover {
+  transform: scale(1.1);
+  cursor: crosshair;
+  filter: brightness(100%) blur(0);
+}
+.goals-container .goal-card__content {
+  position: absolute;
+  top: 0;
+  padding: 1.11rem;
+  height: 100%;
+  text-align: center;
+  font-size: 1.11rem;
+}
+.goals-container .goal-card__content p {
+  padding: 0.875rem;
+  border-radius: 7px;
+  background-color: rgba(235, 73, 58, 0.77);
+  opacity: 0;
+}
+.goals-container .goal-card__content:hover p {
+  opacity: 1;
+}
 
 #hide-goals-btn {
   position: absolute;
-  top: 0;
-  right: 5%;
+  top: 2%;
+  right: 2%;
   color: white;
   cursor: pointer;
 }
