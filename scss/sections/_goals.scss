@@ -39,7 +39,6 @@
 }
 
 .goals-container {
-    border: 3px red solid;
     position: fixed;
     transform: translateX(100%);
     top: 0;
@@ -47,7 +46,7 @@
     height: 100%;
     width: 100%;
     z-index: 99999;
-    background-color: rgba($primary, 0.88);
+    background-color: rgba($primary, 0.98);
     @extend %flex-rowcen;
     @extend %transition;
 
