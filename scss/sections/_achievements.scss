@@ -1,6 +1,7 @@
 @use "../config/" as *;
 
 .achievements {
+    @extend %gradient;
 
     &__grid {
         margin: 0 auto;

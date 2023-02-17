@@ -24,5 +24,9 @@ $secondary: $orange-yellow;
 $background: $secondary;
 $foreground: $white;
 
+// Carousel Icons
+$carousel-control-color: $primary;
+$carousel-control-icon-width: 3rem;
+
 // IMPORT BOOTSTRAP 5 SCSS
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
