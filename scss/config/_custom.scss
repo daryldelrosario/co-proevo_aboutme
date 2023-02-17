@@ -1,9 +1,10 @@
 // My Theme Colors
 $orange-red: #eb493a;
-$orange-yellow: rgb(255, 188, 71);
-$dark-tone: rgb(84, 79, 77);
+$orange-yellow: #ffbc47;
+$dark-tone: #544f4d;
 $light-tone: #f0ccb0;
 $compliment: #EBA23A;
+
 
 // White and Gray Colors
 $white:    #fff;
@@ -20,6 +21,8 @@ $black:    #000;
 
 $primary: $orange-red;
 $secondary: $orange-yellow;
+$background: $secondary;
+$foreground: $white;
 
 // IMPORT BOOTSTRAP 5 SCSS
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
