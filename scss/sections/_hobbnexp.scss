@@ -1,1 +1,37 @@
 @use "../config/" as *;
+
+.hobb-n-exp {
+
+    &__content-container {
+        @extend %flex-rowcen;
+    }
+
+    &__content {
+        height: 88%;
+        width: 88%;
+        text-align: justify;
+        font-size: 1.11rem;
+        padding: 0.875rem;
+        background-color: rgba($black, 0.22);
+        border-radius: 5px;
+        @extend %flex-rowcen;
+        @extend %transition;
+
+        &:hover {
+            box-shadow: 0 0 22px rgba($white, 0.88);
+            cursor: crosshair;
+        }
+    }
+
+    .hobbies {
+        padding-top: 1rem;
+    }
+    
+    .experiences {
+        padding-top: 3rem;
+    }
+    
+    .slide {
+        border: 7px $primary ridge;
+    }
+}

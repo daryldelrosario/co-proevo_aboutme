@@ -3,7 +3,7 @@
 // Toggles universal border for visual aide
 @function visualAide($toggle) {
     @if $toggle {
-        @return 1px solid red;
+        @return 1px solid black;
     } @else {
         @return none;
     }

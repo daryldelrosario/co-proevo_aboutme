@@ -11612,13 +11612,13 @@ textarea.form-control-lg {
   background: linear-gradient(to right, rgba(235, 73, 58, 0.95), rgba(255, 188, 71, 0.95));
 }
 
-.goals-container, .goals__icon, .achievements__item-overlay, header .about-me__content-container {
+.goals-container, .goals__icon, .achievements__item-overlay, .hobb-n-exp__content-container, .hobb-n-exp__content, header .about-me__content-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.goals-container, .goals__icon i, .achievements__item-overlay, header .about-me::after, header .about-me__content-container {
+.goals-container, .goals__icon i, .achievements__item-overlay, .hobb-n-exp__content, header .about-me::after, header .about-me__content-container {
   transition: all 0.5s ease-in-out;
 }
 
@@ -11649,7 +11649,7 @@ textarea.form-control-lg {
   }
 }
 * {
-  border: 1px solid red;
+  border: none;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -11834,6 +11834,29 @@ header .about-me__content .about-me__p p {
 }
 header svg {
   padding-top: 3rem;
+}
+
+.hobb-n-exp__content {
+  height: 88%;
+  width: 88%;
+  text-align: justify;
+  font-size: 1.11rem;
+  padding: 0.875rem;
+  background-color: rgba(0, 0, 0, 0.22);
+  border-radius: 5px;
+}
+.hobb-n-exp__content:hover {
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.88);
+  cursor: crosshair;
+}
+.hobb-n-exp .hobbies {
+  padding-top: 1rem;
+}
+.hobb-n-exp .experiences {
+  padding-top: 3rem;
+}
+.hobb-n-exp .slide {
+  border: 7px #eb493a ridge;
 }
 
 .achievements__grid {
