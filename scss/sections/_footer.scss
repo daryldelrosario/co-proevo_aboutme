@@ -1,9 +1,29 @@
 @use "../config/" as *;
 
-footer {
+.footer {
     font-size: 1.43rem;
     background-color: $black;
     color: $white;
     padding: 1rem;
     text-align: center;
+
+    i {
+        margin-left: 0.77rem;
+    }
+}
+
+// Style the back to top button
+.back-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 9999;
+
+    i {
+        color: $white;
+        font-size: 1rem;
+        @extend %abs-center;
+    }
 }

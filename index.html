@@ -111,12 +111,14 @@
                     <span>
                         <label for="goals-toggle" id="show-goals-btn"
                             onclick="document.getElementById('goals-container').classList.add('show')">
-                            <span class="volume-animation">
-                                <i class="fa-solid fa-medal"></i>
-                            </span>
-                            <span class="main-volume">
-                                <i class="fa-solid fa-medal"></i>
-                            </span>
+                            <div class="icons">
+                                <span class="volume-animation">
+                                    <i class="fa-solid fa-medal"></i>
+                                </span>
+                                <span class="main-volume">
+                                    <i class="fa-solid fa-medal"></i>
+                                </span>
+                            </div>
                         </label>
                     </span>
                     <span class="play-goals-animation"></span>
@@ -128,12 +130,14 @@
                     <span>
                         <label for="music-toggle" id="show-player-btn"
                             onclick="document.getElementById('music-container').classList.add('show')">
-                            <span class="volume-animation">
-                                <i class="fa-solid fa-volume-high"></i>
-                            </span>
-                            <span class="main-volume">
-                                <i class="fa-solid fa-volume-high"></i>
-                            </span>
+                            <div class="icons">
+                                <span class="volume-animation">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                                <span class="main-volume">
+                                    <i class="fa-solid fa-volume-high"></i>
+                                </span>
+                            </div>
                         </label>
                     </span>
                     <span class="play-music-animation"></span>
@@ -363,11 +367,19 @@
 
     <!-- START FOOTER SECTION -->
     <footer class="footer">
-        Daryl del Rosario &copy 2023 via
+        <span class="footer__content">
+            Daryl del Rosario &copy 2023 via
+        </span>
+       
         <a href="https://github.com/daryldelrosario" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/daryldelrosario/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://www.facebook.com/darylxdr/" target="_blank"><i class="fab fa-facebook"></i></a>
     </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#link-aboutme" class="btn btn-primary shadow rounded-circle back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
 
     <!-- Bootstrap v5.3.0-alpha1 JS-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>

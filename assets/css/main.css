@@ -11622,6 +11622,13 @@ textarea.form-control-lg {
   transition: all 0.5s ease-in-out;
 }
 
+.back-to-top i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 @keyframes slide-in {
   from {
     left: -100%;
@@ -12055,10 +12062,26 @@ header svg {
   position: relative;
 }
 
-footer {
+.footer {
   font-size: 1.43rem;
   background-color: #000;
   color: #fff;
   padding: 1rem;
   text-align: center;
+}
+.footer i {
+  margin-left: 0.77rem;
+}
+
+.back-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 9999;
+}
+.back-to-top i {
+  color: #fff;
+  font-size: 1rem;
 }
