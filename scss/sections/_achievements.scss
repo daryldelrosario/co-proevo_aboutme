@@ -4,8 +4,9 @@
     @extend %gradient;
 
     &__grid {
+        padding: 2rem 0 3rem 0;
         margin: 0 auto;
-        width: 100%;
+        width: 97%;
         display: grid;
         grid-template-columns: repeat(3, minmax(auto, 1fr));
         grid-gap: 2rem;
