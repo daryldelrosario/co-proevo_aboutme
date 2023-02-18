@@ -25,28 +25,27 @@ This project uses packages for:
 - Fontawesome v6.3.0
 - Autoprefixer v10.4.13
 
-1. Initialise your project as npm
+### 1. Initialise your project as npm:
 ```
 $ npm init
 ```
 
-2. Install SASS
+### 2. Install SASS:
 ```
 $ npm install --save-dev sass
 ```
 
-3. Install Bootstrap
+### 3. Install Bootstrap:
 ```
 $ npm i bootstrap@5.3.0-alpha1 
 ```
 
-4. Install Fontawesome
+### 4. Install Fontawesome:
 ```
 $ npm install --save @fortawesome/fontawesome-free
-
 ```
 
-5. Install Autoprefixer
+### 5. Install Autoprefixer:
 ```
 $ npm i autoprefixer
 ```
