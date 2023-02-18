@@ -2,10 +2,9 @@
 About me page describing my interests, hobbies, work and personal achievements. Also includes some of my goals at the bottom of the page.
 
 ## <a href="https://daryldelrosario.github.io/co-about-me/">Current Live Demo</a>
-<video width="320" height="240" autoplay loop>
-    <source src="./assets/vid/co-aboutme-profour_ld.mp4" type="video/mp4">
+<video controls>
+    <source src="./assets/vid/co-aboutme-profour_ld.mp4">
 </video>
-
 ## Releases
 <details>
     <summary>v0.1.0 - Jan 21 2023</summary>
