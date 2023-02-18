@@ -4,6 +4,13 @@ nav {
     * {
         font-family: "Nunito", sans-serif;
     }
+
+    .container {
+        @include media-breakpoint-down(lg) {
+            min-width: 97vw;
+        }
+        
+    }
     
     @extend %gradient;
     
@@ -22,5 +29,11 @@ nav {
         text-shadow: 0 0 13px rgba($white, 0.88);
         font-weight: 700;
         color: $primary;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .toggle-box {
+        display: none;
     }
 }

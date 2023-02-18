@@ -1,6 +1,7 @@
 @use "../config/" as *;
 
 .breakme {
+    display: none;
     position: fixed;
     background-color: rgba($black, 0.88);
     height: 100vh;
@@ -9,6 +10,9 @@
     transform: translateY(-100%);
     @extend %flex-rowcen;
     @extend %transition;
+    @include media-breakpoint-down(md) {
+        display: flex;
+    }
 
     &__message {
         text-align: center;

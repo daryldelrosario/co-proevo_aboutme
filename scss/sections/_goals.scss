@@ -183,3 +183,15 @@
         position: relative;
     }
 }
+
+@include media-breakpoint-down(lg) {
+    .goals {
+        padding-bottom: 3rem;
+
+        .toggle-box {
+            display: flex;
+            flex-direction: column;
+            flex: stretch;
+        }
+    }
+}

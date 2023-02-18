@@ -5,6 +5,12 @@
 }
 
 .achievements {
+
+    @include media-breakpoint-down(lg) {
+        .container {
+            min-width: 97vw;
+        }
+    }
     @extend %gradient;
 
     &__grid {

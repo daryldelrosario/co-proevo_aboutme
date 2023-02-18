@@ -9,6 +9,9 @@
 }
 
 .hobb-n-exp {
+    @include media-breakpoint-down(lg) {
+        min-width: 97vw;
+    }
 
     &__content-container {
         @extend %flex-rowcen;
@@ -25,6 +28,15 @@
         @extend %flex-rowcen;
         @extend %transition;
 
+        @include media-breakpoint-down(xlg) {
+            font-size: 1rem;
+        }
+
+        @include media-breakpoint-down(lg) {
+            min-width: 100%;
+            font-size: 0.87rem;
+        }
+
         &:hover {
             box-shadow: 0 0 22px rgba($white, 0.88);
             cursor: crosshair;
@@ -37,6 +49,25 @@
 
     .experiences {
         padding-top: 3rem;
+    }
+
+    @include media-breakpoint-down(lg) {
+        .hobbies, .experiences {
+            width: 99%;
+            margin: 0 auto;
+        }
+
+        .hobbies {
+            .container {
+                min-width: 98%;
+            }
+        }
+
+        .experiences {
+            .container {
+                min-width: 98%;
+            }
+        }
     }
     
     .slide {
