@@ -1,7 +1,7 @@
 # CO - About Me
 About me page describing my interests, hobbies, work and personal achievements. Also includes some of my goals at the bottom of the page.
 
-## <a href="https://daryldelrosario.github.io/co-about-me/">Current Live Demo</a>
+## <a href="https://daryldelrosario.github.io/co-aboutme_pro-four/">Current Live Demo</a>
 
 https://user-images.githubusercontent.com/88211866/219889225-d5c6b0f2-8503-4534-b3d9-2433cd4afdf2.mov
 
