@@ -11618,7 +11618,7 @@ textarea.form-control-lg {
   align-items: center;
 }
 
-.goals-container, .goals__icon i, .achievements__item, .achievements__item-overlay, .hobb-n-exp__content, header .about-me::after, header .about-me__content-container {
+.breakme, .goals-container, .goals__icon i, .achievements__item, .achievements__item-overlay, .hobb-n-exp__content, header .about-me::after, header .about-me__content-container {
   transition: all 0.5s ease-in-out;
 }
 
@@ -12092,18 +12092,21 @@ header svg {
 }
 
 .breakme {
-  display: none;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.88);
   height: 100vh;
   width: 100%;
   z-index: 99999;
+  transform: translateY(-100%);
 }
 .breakme__message {
   text-align: center;
 }
 .breakme__ok .btn {
   width: 11rem;
+}
+.breakme.show {
+  transform: translateY(0);
 }
 .breakme__toggle-box {
   display: none;

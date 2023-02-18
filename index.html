@@ -81,7 +81,7 @@
     </div>
 
     <!-- START BREAKPOINT MESSAGE SECTION -->
-    <div id="breakme" class="breakme">
+    <div id="breakme" class="breakme show">
         <div class="breakme__message">
             <h3>
                 This page has not been optimised for your screen.
@@ -89,9 +89,11 @@
             <p>
                 Continue at your own discretion.
             </p>
-            <div class="breakme__ok">
-                <div class="btn btn-outline-warning">OK</div>
-            </div>
+            <label for="breakme-toggle" id="hide-breakme-btn" onclick="document.getElementById('breakme').classList.remove('show')">
+                <div class="breakme__ok">
+                    <div class="btn btn-outline-warning">OK</div>
+                </div>
+            </label>
         </div>
     </div>
 
@@ -161,7 +163,7 @@
 
                 <!-- Toggle for breakme message -->
                 <div class="toggle-box breakme__toggle-box">
-                    <input type="checkbox" id="breakme-toggle">
+                    <input type="checkbox" id="breakme-toggle" checked>
                     <span>
                         <label for="breakme-toggle" id="show-breakme-btn" onclick="document.getElementById('breakme').classList.add('show')">
                             <span>Break Me</span>
