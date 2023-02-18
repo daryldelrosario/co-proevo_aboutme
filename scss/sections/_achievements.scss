@@ -49,6 +49,10 @@
             @extend %flex-rowcen;
             @extend %transition;
             background-color: rgba($primary, 0.88);
+
+            @include media-breakpoint-down(md) {
+                font-size: 0.875rem;
+            }
         }
 
         &:hover .achievements__item-overlay {

@@ -51,9 +51,12 @@
     @extend %transition;
 
     &__header {
-        font-size: 1.43rem;
         text-align: center;
         padding: 3rem;
+
+        @include media-breakpoint-down(md) {
+            padding: 2rem;
+        }
     }
 
     &__content {
