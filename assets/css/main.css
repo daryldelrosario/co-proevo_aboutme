@@ -11728,6 +11728,11 @@ nav img {
     display: none;
   }
 }
+@media (min-width: 992px) {
+  nav .toggle-me {
+    display: none;
+  }
+}
 #music-toggle {
   display: none;
 }

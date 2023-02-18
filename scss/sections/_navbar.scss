@@ -37,3 +37,11 @@ nav {
         display: none;
     }
 }
+
+@include media-breakpoint-up(lg) {
+    nav {
+        .toggle-me {
+            display: none;
+        }
+    }
+}
