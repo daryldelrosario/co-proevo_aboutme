@@ -20,6 +20,14 @@ https://user-images.githubusercontent.com/88211866/219889225-d5c6b0f2-8503-4534-
 
 ## Releases
 <details>
+    <summary>v1.0.0 - Feb 18 2023</summary>
+
+- Extension from v0.1.0
+- Required two additions from a given five source
+- Check full requirements and release details <a href="https://github.com/daryldelrosario/co-aboutme_pro-four/releases/tag/v1.0.0">here</a>
+</details>
+
+<details>
     <summary>v0.1.0 - Jan 21 2023</summary>
 
 - First design using HTML only with in-line CSS
