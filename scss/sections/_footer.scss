@@ -25,6 +25,10 @@
         bottom: 0.88rem;
     }
 
+    @include media-breakpoint-down(sm) {
+        right: 0.33rem;
+    }
+
     i {
         color: $white;
         font-size: 1rem;

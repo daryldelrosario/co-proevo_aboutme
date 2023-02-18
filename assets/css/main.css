@@ -12154,6 +12154,11 @@ header svg {
     bottom: 0.88rem;
   }
 }
+@media (max-width: 575.98px) {
+  .back-to-top {
+    right: 0.33rem;
+  }
+}
 .back-to-top i {
   color: #fff;
   font-size: 1rem;
