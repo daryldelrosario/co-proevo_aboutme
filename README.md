@@ -3,11 +3,7 @@ About me page describing my interests, hobbies, work and personal achievements. 
 
 ## <a href="https://daryldelrosario.github.io/co-about-me/">Current Live Demo</a>
 
-<kbd>
-    <video controls>
-        <source src="./assets/vid/co-aboutme-profour_ld.mov">
-    </video>
-</kbd>
+https://user-images.githubusercontent.com/88211866/219889225-d5c6b0f2-8503-4534-b3d9-2433cd4afdf2.mov
 
 ## Releases
 <details>
