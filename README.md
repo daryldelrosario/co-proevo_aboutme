@@ -2,9 +2,8 @@
 About me page describing my interests, hobbies, work and personal achievements. Also includes some of my goals at the bottom of the page.
 
 ## <a href="https://daryldelrosario.github.io/co-about-me/">Current Live Demo</a>
-<video controls>
-    <source src="./assets/vid/co-aboutme-profour_ld_cpx.mp4">
-</video>
+
+<kbd><img src="./assets/vid/co-aboutme-profour_ld.mp4"></kbd>
 
 ## Releases
 <details>
