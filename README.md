@@ -18,6 +18,47 @@ https://user-images.githubusercontent.com/88211866/219889225-d5c6b0f2-8503-4534-
     - Media Breakthrough Mixins
     - Bootstrap sass variables
 
+## Installation Instructions
+This project uses packages for:  
+- Sass v1.58.0
+- Bootstrap v5.3.0-alpha1
+- Fontawesome v6.3.0
+- Autoprefixer v10.4.13
+
+1. Initialise your project as npm
+```
+$ npm init
+```
+
+2. Install SASS
+```
+$ npm install --save-dev sass
+```
+
+3. Install Bootstrap
+```
+$ npm i bootstrap@5.3.0-alpha1 
+```
+
+4. Install Fontawesome
+```
+$ npm install --save @fortawesome/fontawesome-free
+
+```
+
+5. Install Autoprefixer
+```
+$ npm i autoprefixer
+```
+
+## SASS Compiler Instructions
+Built in script to compile sass:
+```
+npm run compile:sass
+```
+
+Feel free to modify or add your own script to compile sass inside the <code>package.json</code> file
+
 ## Releases
 <details>
     <summary>v1.0.0 - Feb 18 2023</summary>
