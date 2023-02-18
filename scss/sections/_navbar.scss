@@ -16,4 +16,11 @@ nav {
 .nav-link {
     font-size: 1.11rem;
     margin-right: 0.875rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        text-shadow: 0 0 13px rgba($white, 0.88);
+        font-weight: 700;
+        color: $primary;
+    }
 }

@@ -1,0 +1,25 @@
+@use "../config/" as *;
+
+.breakme {
+    display: none;
+    position: fixed;
+    background-color: rgba($black, 0.88);
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    @extend %flex-rowcen;
+
+    &__message {
+        text-align: center;
+    }
+
+    &__ok {
+        .btn {
+            width: 11rem;
+        }
+    }
+
+    &__toggle-box {
+        display: none;
+    }
+}

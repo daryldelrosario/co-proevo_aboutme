@@ -11612,7 +11612,7 @@ textarea.form-control-lg {
   background: linear-gradient(to right, rgba(235, 73, 58, 0.95), rgba(255, 188, 71, 0.95));
 }
 
-.goals-container, .goals-container .goal-card__content, .goals__icon, .achievements__item-overlay, .hobb-n-exp__content-container, .hobb-n-exp__content, header .about-me__content-container {
+.breakme, .goals-container, .goals-container .goal-card__content, .goals__icon, .achievements__item-overlay, .hobb-n-exp__content-container, .hobb-n-exp__content, header .about-me__content-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11705,6 +11705,12 @@ nav img {
 .nav-link {
   font-size: 1.11rem;
   margin-right: 0.875rem;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  text-shadow: 0 0 13px rgba(255, 255, 255, 0.88);
+  font-weight: 700;
+  color: #eb493a;
 }
 
 #music-toggle {
@@ -12083,4 +12089,22 @@ header svg {
 .back-to-top i {
   color: #fff;
   font-size: 1rem;
+}
+
+.breakme {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.88);
+  height: 100vh;
+  width: 100%;
+  z-index: 99999;
+}
+.breakme__message {
+  text-align: center;
+}
+.breakme__ok .btn {
+  width: 11rem;
+}
+.breakme__toggle-box {
+  display: none;
 }
