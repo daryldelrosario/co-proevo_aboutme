@@ -30,24 +30,9 @@ This project uses packages for:
 $ npm init
 ```
 
-### 2. Install SASS:
+### 2. Install Dependencies:
 ```
-$ npm install --save-dev sass
-```
-
-### 3. Install Bootstrap:
-```
-$ npm i bootstrap@5.3.0-alpha1 
-```
-
-### 4. Install Fontawesome:
-```
-$ npm install --save @fortawesome/fontawesome-free
-```
-
-### 5. Install Autoprefixer:
-```
-$ npm i autoprefixer
+$ npm install
 ```
 
 ## SASS Compiler Instructions
