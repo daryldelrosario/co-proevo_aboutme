@@ -60,6 +60,13 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
 
 ## Releases
 <details>
+    <summary>v1.0.1 - Mar 03 2023</summary>
+
+- Fixed carousel bug
+- Full details <a href="https://github.com/daryldelrosario/co-aboutme_pro-four/releases/tag/v1.0.1">here
+</details>
+
+<details>
     <summary>v1.0.0 - Feb 18 2023</summary>
 
 - Extension from v0.1.0
