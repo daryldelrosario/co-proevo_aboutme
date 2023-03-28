@@ -11,10 +11,12 @@ const aboutMe = document.querySelector(".about-me");
 const solidFill = document.querySelector(".solid-fill");
 const waveGradient = document.getElementById("myGradient");
 const stops = waveGradient.getElementsByTagName("stop");
+const headingLine = document.querySelector(".heading-line");
 
 const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
+headingLine.style.setProperty("--heading-line-color", primary);
 
 function darkMode() {
     body.classList.toggle("dark-body");
@@ -33,6 +35,7 @@ function darkMode() {
         });
         aboutMe.style.borderTop = "7px solid " + primaryDark;
         aboutMe.style.setProperty("--about-me-after-bg-color", primaryDark);
+        headingLine.style.setProperty("--heading-line-color", primaryDark);
         solidFill.setAttribute("fill", secondaryDark);
         stops[0].setAttribute("stop-color", primaryDark);
         stops[1].setAttribute("stop-color", secondaryDark);
@@ -47,6 +50,7 @@ function darkMode() {
         });
         aboutMe.style.borderTop = "7px solid " + primary;
         aboutMe.style.setProperty("--about-me-after-bg-color", primary);
+        headingLine.style.setProperty("--heading-line-color", primary);
         solidFill.setAttribute("fill", secondary);
         stops[0].setAttribute("stop-color", primary);
         stops[1].setAttribute("stop-color", secondary);

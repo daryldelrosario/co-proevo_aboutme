@@ -33,7 +33,7 @@ h2 {
     height: 0.1rem;
     display: block;
     margin: 0 auto;
-    background-color: $primary;
+    background-color: var(--heading-line-color);
 }
 
 .heading-line::after {
@@ -44,7 +44,7 @@ h2 {
     display: block;
     margin: 0 auto;
     margin-bottom: 1rem;
-    background-color: $primary;
+    background-color: var(--heading-line-color);
 }
 
 .dark-gradient {
