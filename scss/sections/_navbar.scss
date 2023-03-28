@@ -11,7 +11,7 @@ nav {
         }
         
     }
-    
+
     @extend %gradient;
     
     img {
@@ -38,14 +38,19 @@ nav {
                 width: 0;
                 height: 0;
 
+                &:checked + .slider {
+                    background-color: $primary-dark;
+                }
+
                 &:focus + .slider {
-                    box-shadow: 0 0 2px #2196f3;
+                    box-shadow: 0 0 2px $secondary-dark;
                 }
 
                 &:checked + .slider:before {
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%) translateX(1.63rem);
+                    background-color: $secondary-dark;
                 }
             }
 
@@ -56,7 +61,7 @@ nav {
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: #ccc;
+                background-color: $primary;
                 transition: all 0.4s ease-in;
                 border-radius: 2.13rem;
 
@@ -69,7 +74,7 @@ nav {
                     width: 1.63rem;
                     left: 0.25rem;
                     bottom: 0.25rem;
-                    background-color: white;
+                    background-color: $secondary;
                     transition: 0.4s;
                     border-radius: 50%;
                 }

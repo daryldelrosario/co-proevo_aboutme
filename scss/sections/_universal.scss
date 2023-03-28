@@ -47,10 +47,19 @@ h2 {
     background-color: $primary;
 }
 
-// Dark mode
-.dark-mode {
-    background-color: #252525;
-    color: #f2f2f2;
-
-    @extend %dark-gradient;
+.dark-gradient {
+    background: linear-gradient(to right, rgba($primary-dark, 0.95), rgba($secondary-dark, 0.95));
 }
+
+.dark-border-top {
+    border-top: 7px solid $primary-dark;
+}
+
+.dark-background {
+    background-color: $primary-dark;
+}
+
+.dark-body {
+    background-color: $secondary-dark;
+}
+
