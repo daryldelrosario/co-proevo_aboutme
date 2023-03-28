@@ -51,4 +51,6 @@ h2 {
 .dark-mode {
     background-color: #252525;
     color: #f2f2f2;
+
+    @extend %dark-gradient;
 }

@@ -5,6 +5,11 @@
     background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
 }
 
+// Background gradient for dark-mode
+%dark-gradient {
+    background: linear-gradient(to right, rbga($dark-tone, 0.95), rgba($light-tone, 0.95));
+}
+
 // Flex center w/ direction row
 %flex-rowcen {
     display: flex;
