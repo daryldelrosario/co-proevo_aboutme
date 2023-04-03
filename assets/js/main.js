@@ -3,6 +3,13 @@ const secondary = "#ffbc47";
 const primaryDark = "#2c786c";
 const secondaryDark = "#594d9c";
 
+// NAV SECTION
+// HEADER SECTION
+// HOBBIES AND EXPERIENCES SECTION
+// ACHIEVEMENTS SECTION
+// GOALS SECTION
+// FOOTER SECTION
+
 const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const navLinks = document.querySelectorAll(".nav-link");
