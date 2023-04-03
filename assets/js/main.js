@@ -22,13 +22,14 @@ const stops = waveGradient.getElementsByTagName("stop");
 // ACHIEVEMENTS SECTION
 const achievements = document.querySelector(".achievements");
 const achievementsItem = document.querySelectorAll(".achievements__item");
+const overlays = document.querySelectorAll(".achievements__item-overlay");
 
 // GOALS SECTION
 // FOOTER SECTION
 
 
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
-headingLine.style.setProperty("--heading-line-color", primary);
+headingLine.style.setProperty("--heading-line-color", primary)
 
 function darkMode() {
     body.classList.toggle("dark-body");
@@ -49,8 +50,11 @@ function darkMode() {
         aboutMe.style.borderTop = "7px solid " + primaryDark;
         achievementsItem.forEach(item => {
             item.style.borderTop = "5px solid " + primaryDark;
-        })
+        });
         aboutMe.style.setProperty("--about-me-after-bg-color", primaryDark);
+        overlays.forEach(overlay => {
+            overlay.style.backgroundColor = `rgba(44, 120, 108, 0.88)`;
+        });
         headingLine.style.setProperty("--heading-line-color", primaryDark);
         solidFill.setAttribute("fill", secondaryDark);
         stops[0].setAttribute("stop-color", primaryDark);
@@ -67,8 +71,11 @@ function darkMode() {
         aboutMe.style.borderTop = "7px solid " + primary;
         achievementsItem.forEach(item => {
             item.style.borderTop = "5px solid " + primary;
-        })
+        });
         aboutMe.style.setProperty("--about-me-after-bg-color", primary);
+        overlays.forEach(overlay => {
+            overlay.style.backgroundColor = `rgba(235, 70, 55, 0.88)`;
+        });
         headingLine.style.setProperty("--heading-line-color", primary);
         solidFill.setAttribute("fill", secondary);
         stops[0].setAttribute("stop-color", primary);
