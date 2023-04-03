@@ -11608,7 +11608,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.goals__icon i, .achievements, header, nav {
+.achievements, header, nav {
   background: linear-gradient(to right, rgba(235, 70, 55, 0.95), rgba(255, 188, 71, 0.95));
 }
 

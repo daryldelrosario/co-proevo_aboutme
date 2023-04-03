@@ -170,7 +170,7 @@
         i {
             font-size: 9rem;
             border-radius: 0.88rem;
-            @extend %gradient;
+            // @extend %gradient;
             @extend %transition;
             box-shadow: 0 0 22px rgba($white, 0.88);
 
