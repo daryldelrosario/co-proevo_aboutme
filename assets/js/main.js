@@ -137,3 +137,82 @@ function darkMode() {
 }
 
 darkModeToggle.addEventListener("click", darkMode);
+
+// =====================
+// FOR JAVA SCRIPT TIMER 
+// =====================
+// DOM VARIABLES FOR JAVASCRIPT TIMER
+const myStartDate = "August 1, 2021 00:00:00"; // Learn to code start date
+const calcStartDate = new Date(myStartDate).getTime();
+const startedCoding = document.getElementById("started-coding-container");
+const yearBox = document.getElementById("year-js");
+const dayBox = document.getElementById("day-js");
+const hourBox = document.getElementById("hour-js");
+const minBox = document.getElementById("minute-js");
+const secondsBox = document.getElementById("second-js");
+const yearCaption = document.getElementById("year-text");
+const dayCaption = document.getElementById("day-text");
+const hourCaption = document.getElementById("hour-text");
+const minCaption = document.getElementById("minute-text");
+const secondsCaption = document.getElementById("second-text");
+
+
+// Time conversion to milliseconds
+const msYear = 1000 * 60 * 60 * 24 * 365;
+const msDay = 1000 * 60 * 60 * 24;
+const msHour = 1000 * 60 * 60;
+const msMinute = 1000 * 60
+const msSecond = 1000;
+
+// Update timer every second
+const timer = setInterval(function() {
+    const now = new Date().getTime();
+    const passedTime = now - calcStartDate;
+
+    // Convert passedTime to years, days, hours, minutes and seconds
+    const years = Math.floor(passedTime / (msYear));
+    const days = Math.floor((passedTime % msYear) / msDay);
+    const hours = Math.floor((passedTime % msDay) / msHour);
+    const minutes = Math.floor((passedTime % msHour) / msMinute);
+    const seconds = Math.floor((passedTime % msMinute) / msSecond);
+
+    yearBox.textContent = years;
+    dayBox.textContent = days;
+    hourBox.textContent = hours;
+    minBox.textContent = minutes;
+    secondsBox.textContent = seconds;
+
+    if(years <= 1) {
+        yearCaption.textContent = "Year";
+    } else {
+        yearCaption.textContent = "Years";
+    }
+
+    if(days <= 1) {
+        dayCaption.textContent = "Day";
+    } else {
+        dayCaption.textContent = "Days";
+    }
+
+    if(hours <= 1) {
+        hourCaption.textContent = "Hour";
+    } else {
+        hourCaption.textContent = "Hours";
+    }
+
+    if(minutes <= 1) {
+        minCaption.textContent = "Minute";
+    } else {
+        minCaption.textContent = "Minutes";
+    }
+
+    if(seconds <= 1) {
+        secondsCaption.textContent = "Second";
+    } else {
+        secondsCaption.textContent = "Seconds";
+    }
+
+
+
+
+}, 1000); // Update every second (1000 milliseconds)

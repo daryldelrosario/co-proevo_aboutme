@@ -19,9 +19,74 @@ nav {
         height: 3rem;
     }
 
-    #started-coding-container {
-        width: auto;
-        border: 1px red solid;
+    #started-coding-grid {
+        position: relative;
+        width: 345px;
+        text-align: center;
+        color: $black;
+        font-weight: 900;
+        display: grid;
+        grid-template-columns: repeat(5, minmax(auto, 1fr));
+        gap: 7px;
+
+        .time-grid {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 55px;
+            background-color: rgba($white, 0.77);
+            opacity: 1;
+            z-index: 1;
+            transition: opacity 0.5s ease-in-out;
+
+            #year-js, #day-js, #hour-js, #minute-js, #second-js{
+                position: absolute;
+                top: 0;
+                padding: 9px;
+            }
+
+            .time-caption {
+                position: absolute;
+                bottom: 0;
+                font-size: 13px;
+                padding: 2px;
+            }
+        }
+
+        #code-overlay {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.5s ease-in-out;
+            background-color: transparent;
+            color: $white;
+            font-family: "Poppins";
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        &:hover {
+            #code-overlay {
+                opacity: 1;
+                z-index: 1;
+                cursor: crosshair;
+            }
+
+            .time-grid {
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 0.5s ease-in-out;
+            }
+        }
     }
 
     .dark-mode-container {

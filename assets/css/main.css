@@ -11727,9 +11727,66 @@ nav img {
   width: 6rem;
   height: 3rem;
 }
-nav #started-coding-container {
-  width: auto;
-  border: 1px red solid;
+nav #started-coding-grid {
+  position: relative;
+  width: 345px;
+  text-align: center;
+  color: #000;
+  font-weight: 900;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(auto, 1fr));
+  gap: 7px;
+}
+nav #started-coding-grid .time-grid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  background-color: rgba(255, 255, 255, 0.77);
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+nav #started-coding-grid .time-grid #year-js, nav #started-coding-grid .time-grid #day-js, nav #started-coding-grid .time-grid #hour-js, nav #started-coding-grid .time-grid #minute-js, nav #started-coding-grid .time-grid #second-js {
+  position: absolute;
+  top: 0;
+  padding: 9px;
+}
+nav #started-coding-grid .time-grid .time-caption {
+  position: absolute;
+  bottom: 0;
+  font-size: 13px;
+  padding: 2px;
+}
+nav #started-coding-grid #code-overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 17px;
+}
+nav #started-coding-grid:hover #code-overlay {
+  opacity: 1;
+  z-index: 1;
+  cursor: crosshair;
+}
+nav #started-coding-grid:hover .time-grid {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out;
 }
 nav .dark-mode-container {
   position: absolute;
