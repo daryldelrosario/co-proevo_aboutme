@@ -1,11 +1,13 @@
-# CO - About Me
-About me page describing my interests, hobbies, work and personal achievements. Also includes some of my goals at the bottom of the page.
+# CO Project Nine - About Me Page
+This about me page is an evolving project that started with only HTML. Then we learnt, designed and applied CSS, SCSS and now JavaScript. Each version has been documented in the `Release` Section at the bottom of this readme.md. Directly below is the current live demo.
 
-## <a href="https://daryldelrosario.github.io/co-aboutme_pro-four/">Current Live Demo</a>
+## <a href="https://daryldelrosario.github.io/co-pronine_aboutme/">Current Live Demo</a>
 
-https://user-images.githubusercontent.com/88211866/219889225-d5c6b0f2-8503-4534-b3d9-2433cd4afdf2.mov
+<kbd><img src="./assets/vid/pro-nine_ld.gif" alt="live demo gif of up to date project">
 
 ## Features
+- Includes JS Toggle to change color-mode
+- Includes JS Timer to dispay how long it has been since I started learning how to code
 - Created with SASS sheets
 - Designed responsively
 - Includes "Under Construction" msg for screen sizes below bootstrap-md
