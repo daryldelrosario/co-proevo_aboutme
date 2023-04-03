@@ -35,8 +35,9 @@ const icon = document.querySelector(".goals__icon i");
 const goalsContainer = document.querySelector(".goals-container");
 
 // FOOTER SECTION
+const footerIcons = document.querySelectorAll('.footer i');
 
-
+// SETTING LOADED PROPERTIES
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
 headingLine.style.setProperty("--heading-line-color", primary);
 icon.style.background = primaryGradient;
@@ -75,7 +76,10 @@ function darkMode() {
         icon.style.background = darkGradient;
         icon.style.setProperty("--icon-boxshadow-hover-color", primaryDark);
         goalsContainer.style.setProperty("--goal-overlay-color", darkGoal);
-goalsContainer.style.setProperty("--goal-p-overlay-color", darkGoalP);
+        goalsContainer.style.setProperty("--goal-p-overlay-color", darkGoalP);
+        footerIcons.forEach(icon => {
+            icon.style.color = primaryDark;
+        })
     } else {
         navLinks.forEach(link => {
             link.addEventListener("mouseover", function() {
@@ -100,7 +104,10 @@ goalsContainer.style.setProperty("--goal-p-overlay-color", darkGoalP);
         icon.style.background = primaryGradient;
         icon.style.setProperty("--icon-boxshadow-hover-color", primary);
         goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
-goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
+        goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
+        footerIcons.forEach(icon => {
+            icon.style.color = primary;
+        })
     }
 }
 
