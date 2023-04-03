@@ -4,6 +4,10 @@ const primaryDark = "#2c786c";
 const secondaryDark = "#594d9c";
 const primaryGradient = "linear-gradient(to right, rgba(235, 70, 55, 0.95), rgba(255, 188, 71, 0.95))";
 const darkGradient = "linear-gradient(to right, rgba(90, 77, 156, 0.95), rgba(44, 120, 109, 0.95))";
+const primaryGoal = "rgba(235, 70, 55, 0.98)";
+const primaryGoalP = "rgba(235, 70, 55, 0.77)";
+const darkGoal = "rgba(44, 120, 108, 0.98)";
+const darkGoalP = "rgba(44, 120, 108, 0.77)";
 
 // NAV SECTION
 const nav = document.querySelector("nav");
@@ -28,6 +32,7 @@ const overlays = document.querySelectorAll(".achievements__item-overlay");
 
 // GOALS SECTION
 const icon = document.querySelector(".goals__icon i");
+const goalsContainer = document.querySelector(".goals-container");
 
 // FOOTER SECTION
 
@@ -36,6 +41,8 @@ aboutMe.style.setProperty("--about-me-after-bg-color", primary);
 headingLine.style.setProperty("--heading-line-color", primary);
 icon.style.background = primaryGradient;
 icon.style.setProperty("--icon-boxshadow-hover-color", primary);
+goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
+goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
 
 function darkMode() {
     body.classList.toggle("dark-body");
@@ -67,6 +74,8 @@ function darkMode() {
         stops[1].setAttribute("stop-color", secondaryDark);
         icon.style.background = darkGradient;
         icon.style.setProperty("--icon-boxshadow-hover-color", primaryDark);
+        goalsContainer.style.setProperty("--goal-overlay-color", darkGoal);
+goalsContainer.style.setProperty("--goal-p-overlay-color", darkGoalP);
     } else {
         navLinks.forEach(link => {
             link.addEventListener("mouseover", function() {
@@ -90,6 +99,8 @@ function darkMode() {
         stops[1].setAttribute("stop-color", secondary);
         icon.style.background = primaryGradient;
         icon.style.setProperty("--icon-boxshadow-hover-color", primary);
+        goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
+goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
     }
 }
 

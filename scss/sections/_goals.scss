@@ -46,7 +46,7 @@
     height: 100%;
     width: 100%;
     z-index: 99999;
-    background-color: rgba($primary, 0.98);
+    background-color: var(--goal-overlay-color);
     @extend %flex-rowcen;
     @extend %transition;
 
@@ -124,7 +124,7 @@
             p {
                 padding: 0.875rem;
                 border-radius: 7px;
-                background-color: rgba($primary, 0.77);
+                background-color: var(--goal-p-overlay-color);
                 opacity: 0;
             }
 
@@ -176,7 +176,6 @@
             &:hover {
                 scale: (1.11);
                 box-shadow: 0 0 22px var(--icon-boxshadow-hover-color);
-                // box-shadow: 0 0 22px rgba($primary, 0.98);
                 cursor: pointer;
             }
         }

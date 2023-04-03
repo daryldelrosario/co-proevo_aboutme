@@ -12085,7 +12085,7 @@ header svg {
   height: 100%;
   width: 100%;
   z-index: 99999;
-  background-color: rgba(235, 70, 55, 0.98);
+  background-color: var(--goal-overlay-color);
 }
 .goals-container__header {
   text-align: center;
@@ -12149,7 +12149,7 @@ header svg {
 .goals-container .goal-card__content p {
   padding: 0.875rem;
   border-radius: 7px;
-  background-color: rgba(235, 70, 55, 0.77);
+  background-color: var(--goal-p-overlay-color);
   opacity: 0;
 }
 .goals-container .goal-card__content:hover p {
