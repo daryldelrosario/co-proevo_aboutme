@@ -71,6 +71,6 @@
     }
     
     .slide {
-        border: 7px $primary ridge;
+        border: var(--slide-border);
     }
 }

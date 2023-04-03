@@ -24,6 +24,7 @@ const solidFill = document.querySelector(".solid-fill");
 const body = document.querySelector("body");
 const waveGradient = document.getElementById("myGradient");
 const stops = waveGradient.getElementsByTagName("stop");
+const slideBorders = document.querySelectorAll(".slide");
 
 // ACHIEVEMENTS SECTION
 const achievements = document.querySelector(".achievements");
@@ -41,11 +42,13 @@ const toTopBtn = document.querySelector('.btn-primary');
 // SETTING LOADED PROPERTIES
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
 headingLine.style.setProperty("--heading-line-color", primary);
+slideBorders.forEach(slide => {
+    slide.style.setProperty("--slide-border", `7px ${primary} ridge`);
+});
 icon.style.background = primaryGradient;
 icon.style.setProperty("--icon-boxshadow-hover-color", primary);
 goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
 goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
-
 toTopBtn.style.setProperty("--bs-btn-bg", primary);
 toTopBtn.style.setProperty("--bs-btn-border-color", primary);
 toTopBtn.style.setProperty("--bs-btn-hover-border-color", primaryDark);
@@ -80,6 +83,9 @@ function darkMode() {
         solidFill.setAttribute("fill", secondaryDark);
         stops[0].setAttribute("stop-color", primaryDark);
         stops[1].setAttribute("stop-color", secondaryDark);
+        slideBorders.forEach(slide => {
+            slide.style.setProperty("--slide-border", `7px ${primaryDark} ridge`);
+        });
         icon.style.background = darkGradient;
         icon.style.setProperty("--icon-boxshadow-hover-color", primaryDark);
         goalsContainer.style.setProperty("--goal-overlay-color", darkGoal);
@@ -112,6 +118,9 @@ function darkMode() {
         solidFill.setAttribute("fill", secondary);
         stops[0].setAttribute("stop-color", primary);
         stops[1].setAttribute("stop-color", secondary);
+        slideBorders.forEach(slide => {
+            slide.style.setProperty("--slide-border", `7px ${primary} ridge`);
+        });
         icon.style.background = primaryGradient;
         icon.style.setProperty("--icon-boxshadow-hover-color", primary);
         goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
