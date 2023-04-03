@@ -20,6 +20,8 @@ const waveGradient = document.getElementById("myGradient");
 const stops = waveGradient.getElementsByTagName("stop");
 
 // ACHIEVEMENTS SECTION
+const achievements = document.querySelector(".achievements");
+
 // GOALS SECTION
 // FOOTER SECTION
 
@@ -32,6 +34,7 @@ function darkMode() {
     nav.classList.toggle("dark-gradient");
     header.classList.toggle("dark-gradient");
     aboutMe.classList.toggle("dark-border-top");
+    achievements.classList.toggle("dark-gradient");
 
     if(aboutMe.classList.contains('dark-border-top')) {
         navLinks.forEach(link => {
