@@ -36,6 +36,7 @@ const goalsContainer = document.querySelector(".goals-container");
 
 // FOOTER SECTION
 const footerIcons = document.querySelectorAll('.footer i');
+const toTopBtn = document.querySelector('.btn-primary');
 
 // SETTING LOADED PROPERTIES
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
@@ -45,6 +46,12 @@ icon.style.setProperty("--icon-boxshadow-hover-color", primary);
 goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
 goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
 
+toTopBtn.style.setProperty("--bs-btn-bg", primary);
+toTopBtn.style.setProperty("--bs-btn-border-color", primary);
+toTopBtn.style.setProperty("--bs-btn-hover-border-color", primaryDark);
+toTopBtn.style.setProperty("--bs-btn-hover-bg", primaryDark);
+
+// FUNCTION: toggle between dark-mode and light-mode
 function darkMode() {
     body.classList.toggle("dark-body");
     nav.classList.toggle("dark-gradient");
@@ -79,7 +86,11 @@ function darkMode() {
         goalsContainer.style.setProperty("--goal-p-overlay-color", darkGoalP);
         footerIcons.forEach(icon => {
             icon.style.color = primaryDark;
-        })
+        });
+        toTopBtn.style.setProperty("--bs-btn-bg", primaryDark);
+        toTopBtn.style.setProperty("--bs-btn-border-color", primaryDark);
+        toTopBtn.style.setProperty("--bs-btn-hover-border-color", primary);
+        toTopBtn.style.setProperty("--bs-btn-hover-bg", primary);
     } else {
         navLinks.forEach(link => {
             link.addEventListener("mouseover", function() {
@@ -107,7 +118,11 @@ function darkMode() {
         goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
         footerIcons.forEach(icon => {
             icon.style.color = primary;
-        })
+        });
+        toTopBtn.style.setProperty("--bs-btn-bg", primary)
+        toTopBtn.style.setProperty("--bs-btn-border-color", primary);
+        toTopBtn.style.setProperty("--bs-btn-hover-border-color", primaryDark);
+        toTopBtn.style.setProperty("--bs-btn-hover-bg", primaryDark);
     }
 }
 
