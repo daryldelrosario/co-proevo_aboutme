@@ -21,6 +21,7 @@ const stops = waveGradient.getElementsByTagName("stop");
 
 // ACHIEVEMENTS SECTION
 const achievements = document.querySelector(".achievements");
+const achievementsItem = document.querySelectorAll(".achievements__item");
 
 // GOALS SECTION
 // FOOTER SECTION
@@ -46,6 +47,9 @@ function darkMode() {
             });
         });
         aboutMe.style.borderTop = "7px solid " + primaryDark;
+        achievementsItem.forEach(item => {
+            item.style.borderTop = "5px solid " + primaryDark;
+        })
         aboutMe.style.setProperty("--about-me-after-bg-color", primaryDark);
         headingLine.style.setProperty("--heading-line-color", primaryDark);
         solidFill.setAttribute("fill", secondaryDark);
@@ -61,6 +65,9 @@ function darkMode() {
             });
         });
         aboutMe.style.borderTop = "7px solid " + primary;
+        achievementsItem.forEach(item => {
+            item.style.borderTop = "5px solid " + primary;
+        })
         aboutMe.style.setProperty("--about-me-after-bg-color", primary);
         headingLine.style.setProperty("--heading-line-color", primary);
         solidFill.setAttribute("fill", secondary);
