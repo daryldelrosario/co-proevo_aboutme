@@ -24,6 +24,7 @@
         font-size: 1.11rem;
         padding: 0.875rem;
         background-color: rgba($black, 0.22);
+        color: $white;
         border-radius: 5px;
         @extend %flex-rowcen;
         @extend %transition;
@@ -71,6 +72,6 @@
     }
     
     .slide {
-        border: 7px $primary ridge;
+        border: var(--slide-border);
     }
 }

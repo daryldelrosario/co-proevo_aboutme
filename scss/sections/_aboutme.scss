@@ -28,7 +28,7 @@ header {
             left: 0;
             height: 100%;
             width: 100%;
-            background: $primary;
+            background-color: var(--about-me-after-bg-color);
             opacity: 0;
             @extend %transition;
         }

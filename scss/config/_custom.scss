@@ -1,9 +1,13 @@
 // My Theme Colors
-$orange-red: #eb4637;
-$orange-yellow: #ffbc47;
+$orange-red: #eb4637; //rgb(235, 70, 55)
+$orange-yellow: #ffbc47; //rgb(255, 188, 71)
 $dark-tone: #544f4d;
 $light-tone: #f0ccb0;
 $compliment: #EBA23A;
+
+// Dark-Mode Colors
+$blue-green-dark: #2c786c; //rgb(44, 120, 108)
+$blue-purple-dark: #5a4d9c; //rgb(90, 77, 156)
 
 
 // White and Gray Colors
@@ -21,11 +25,13 @@ $black:    #000;
 
 $primary: $orange-red;
 $secondary: $orange-yellow;
+$primary-dark: $blue-green-dark;
+$secondary-dark: $blue-purple-dark;
 $background: $secondary;
 $foreground: $white;
 
 // Carousel Icons
-$carousel-control-color: $primary;
+$carousel-control-color: $white;
 $carousel-control-icon-width: 3rem;
 
 // IMPORT BOOTSTRAP 5 SCSS
