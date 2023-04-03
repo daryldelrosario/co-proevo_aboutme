@@ -47,6 +47,14 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
 
 ## Releases
 <details>
+    <summary>v1.2.0 - Apr 03 2023</summary>   
+
+- Extension from v1.0.0 
+- Required implementation of javascript
+- Check full release details <a href="https://github.com/daryldelrosario/co-pronine_aboutme/releases/tag/v1.2.0">here</a>
+</details>
+
+<details>
     <summary>v1.0.1 - Mar 03 2023</summary>
 
 - Fixed carousel bug
