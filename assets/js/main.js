@@ -4,23 +4,25 @@ const primaryDark = "#2c786c";
 const secondaryDark = "#594d9c";
 
 // NAV SECTION
+const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll(".nav-link");
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+
 // HEADER SECTION
+const header = document.querySelector("header");
+const headingLine = document.querySelector(".heading-line");
+const aboutMe = document.querySelector(".about-me");
+const solidFill = document.querySelector(".solid-fill");
+
 // HOBBIES AND EXPERIENCES SECTION
+const body = document.querySelector("body");
+const waveGradient = document.getElementById("myGradient");
+const stops = waveGradient.getElementsByTagName("stop");
+
 // ACHIEVEMENTS SECTION
 // GOALS SECTION
 // FOOTER SECTION
 
-const body = document.querySelector("body");
-const nav = document.querySelector("nav");
-const navLinks = document.querySelectorAll(".nav-link");
-const header = document.querySelector("header");
-const aboutMe = document.querySelector(".about-me");
-const solidFill = document.querySelector(".solid-fill");
-const waveGradient = document.getElementById("myGradient");
-const stops = waveGradient.getElementsByTagName("stop");
-const headingLine = document.querySelector(".heading-line");
-
-const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
 headingLine.style.setProperty("--heading-line-color", primary);
