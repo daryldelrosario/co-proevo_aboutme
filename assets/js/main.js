@@ -1,3 +1,4 @@
+// DOM VARIABLES FOR COLOR-TOGGLE FUNCTION
 const primary = "#eb4637";
 const secondary = "#ffbc47";
 const primaryDark = "#2c786c";

@@ -11727,6 +11727,10 @@ nav img {
   width: 6rem;
   height: 3rem;
 }
+nav #started-coding-container {
+  width: auto;
+  border: 1px red solid;
+}
 nav .dark-mode-container {
   position: absolute;
   right: 0;
