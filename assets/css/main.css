@@ -12189,7 +12189,7 @@ header svg {
 }
 .goals__icon i:hover {
   scale: 1.11;
-  box-shadow: 0 0 22px rgba(235, 70, 55, 0.98);
+  box-shadow: 0 0 22px var(--icon-boxshadow-hover-color);
   cursor: pointer;
 }
 .goals__overlay {

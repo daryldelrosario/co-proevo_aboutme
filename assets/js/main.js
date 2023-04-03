@@ -34,8 +34,8 @@ const icon = document.querySelector(".goals__icon i");
 
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
 headingLine.style.setProperty("--heading-line-color", primary);
-
 icon.style.background = primaryGradient;
+icon.style.setProperty("--icon-boxshadow-hover-color", primary);
 
 function darkMode() {
     body.classList.toggle("dark-body");
@@ -66,6 +66,7 @@ function darkMode() {
         stops[0].setAttribute("stop-color", primaryDark);
         stops[1].setAttribute("stop-color", secondaryDark);
         icon.style.background = darkGradient;
+        icon.style.setProperty("--icon-boxshadow-hover-color", primaryDark);
     } else {
         navLinks.forEach(link => {
             link.addEventListener("mouseover", function() {
@@ -88,6 +89,7 @@ function darkMode() {
         stops[0].setAttribute("stop-color", primary);
         stops[1].setAttribute("stop-color", secondary);
         icon.style.background = primaryGradient;
+        icon.style.setProperty("--icon-boxshadow-hover-color", primary);
     }
 }
 
