@@ -1,9 +1,9 @@
 # CO Project Nine - About Me Page
-This about me page is an evolving project that started with only HTML. Then we learnt, designed and applied CSS, SCSS and now JavaScript. Each version has been documented in the `Release` Section at the bottom of this readme.md. Directly below is the current live demo.
+This about me page is an evolving project that started with only HTML. Then we learnt, designed and applied CSS, SCSS and now JavaScript. Each version has been documented in the `Release` Section at the bottom of this readme file. Directly below is the current live demo.
 
 ## <a href="https://daryldelrosario.github.io/co-pronine_aboutme/">Current Live Demo</a>
 
-<kbd><img src="./assets/vid/pro-nine_ld.gif" alt="live demo gif of up to date project">
+<kbd><img src="./assets/vid/pro-ten_ld.gif" alt="live demo gif of up to date project">
 
 ## Features
 - Includes JS Toggle to change color-mode
