@@ -14,6 +14,7 @@ $toggle: false;
 body {
     background-color: $background;
     color: $foreground;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -63,5 +64,40 @@ h2 {
 
 .dark-body {
     background-color: $secondary-dark;
+}
+
+// Observer API effects
+//==============
+//HEADER EFFECTS
+//==============
+.move-header {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.fade-effect {
+    opacity: 1;
+}
+
+//==============
+//OBJECT EFFECTS
+//==============
+.left {
+    opacity: 0;
+    transform-origin: left center;
+    transform: translateX(-50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.right {
+    opacity: 0;
+    transform-origin: right center;
+    transform: translateX(50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.slide-effect {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
 }
 

@@ -226,3 +226,40 @@ const timer = setInterval(function() {
 //FOR INTERSECTION OBSERVER API
 //=============================
 // DOM ELEMENTS TO MANIPULATE FOR INTERESECTION OBSERVER API
+const headers = document.querySelectorAll(".move-header");
+const objects = document.querySelectorAll(".move-object");
+
+const options = {
+    threshold: 0.5
+};
+
+// OBSERVER API VARIABLES
+const headerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("fade-effect");
+        } else {
+            entry.target.classList.remove("fade-effect");
+        }
+    });
+}, options);
+
+const objectObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("slide-effect");
+        } else {
+            entry.target.classList.remove("slide-effect");
+        }
+    });
+}, options);
+
+// APPLICATION OF OBSERVER API ON DOM ELEMENTS
+headers.forEach(header => {
+    headerObserver.observe(header);
+});
+
+objects.forEach(object => {
+    objectObserver.observe(object);
+});
+

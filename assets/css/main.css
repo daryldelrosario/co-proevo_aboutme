@@ -11666,6 +11666,7 @@ textarea.form-control-lg {
 body {
   background-color: #ffbc47;
   color: #fff;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -11713,6 +11714,35 @@ h2 {
 
 .dark-body {
   background-color: #5a4d9c;
+}
+
+.move-header {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-effect {
+  opacity: 1;
+}
+
+.left {
+  opacity: 0;
+  transform-origin: left center;
+  transform: translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.right {
+  opacity: 0;
+  transform-origin: right center;
+  transform: translateX(50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.slide-effect {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
 }
 
 nav * {
