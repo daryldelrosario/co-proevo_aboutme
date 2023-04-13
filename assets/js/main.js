@@ -1,3 +1,6 @@
+//=================
+//FOR COLOUR TOGGLE
+//=================
 // DOM VARIABLES FOR COLOR-TOGGLE FUNCTION
 const primary = "#eb4637";
 const secondary = "#ffbc47";
@@ -17,7 +20,7 @@ const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 // HEADER SECTION
 const header = document.querySelector("header");
-const headingLine = document.querySelector(".heading-line");
+const headingLines = document.querySelectorAll(".heading-line");
 const aboutMe = document.querySelector(".about-me");
 const solidFill = document.querySelector(".solid-fill");
 
@@ -42,7 +45,9 @@ const toTopBtn = document.querySelector('.btn-primary');
 
 // SETTING LOADED PROPERTIES
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
-headingLine.style.setProperty("--heading-line-color", primary);
+headingLines.forEach(headingLine => {
+    headingLine.style.setProperty("--heading-line-color", primary);
+});
 slideBorders.forEach(slide => {
     slide.style.setProperty("--slide-border", `7px ${primary} ridge`);
 });
@@ -80,7 +85,9 @@ function darkMode() {
         overlays.forEach(overlay => {
             overlay.style.backgroundColor = `rgba(44, 120, 108, 0.88)`;
         });
-        headingLine.style.setProperty("--heading-line-color", primaryDark);
+        headingLines.forEach(headingLine => {
+            headingLine.style.setProperty("--heading-line-color", primaryDark);
+        });
         solidFill.setAttribute("fill", secondaryDark);
         stops[0].setAttribute("stop-color", primaryDark);
         stops[1].setAttribute("stop-color", secondaryDark);
@@ -115,7 +122,9 @@ function darkMode() {
         overlays.forEach(overlay => {
             overlay.style.backgroundColor = `rgba(235, 70, 55, 0.88)`;
         });
-        headingLine.style.setProperty("--heading-line-color", primary);
+        headingLines.forEach(headingLine => {
+            headingLine.style.setProperty("--heading-line-color", primary);
+        });
         solidFill.setAttribute("fill", secondary);
         stops[0].setAttribute("stop-color", primary);
         stops[1].setAttribute("stop-color", secondary);
@@ -212,3 +221,8 @@ const timer = setInterval(function() {
         secondsCaption.textContent = "Seconds";
     }
 }, 1000); // Update every second (1000 milliseconds)
+
+//=============================
+//FOR INTERSECTION OBSERVER API
+//=============================
+// DOM ELEMENTS TO MANIPULATE FOR INTERESECTION OBSERVER API
