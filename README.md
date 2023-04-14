@@ -6,6 +6,7 @@ This about me page is an evolving project that started with only HTML. Then we l
 <kbd><img src="./assets/vid/pro-ten_ld.gif" alt="live demo gif of up to date project">
 
 ## Features
+- Includes JS Intersection Observer API
 - Includes JS Toggle to change color-mode
 - Includes JS Timer to dispay how long it has been since I started learning how to code
 - Created with SASS sheets
