@@ -52,6 +52,7 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
 ## Releases
 <details>
     <summary>v1.2.0 - Apr 03 2023</summary>   
+    
 - Project Nine:
     - Extension from v1.0.0 
     - Required implementation of javascript
