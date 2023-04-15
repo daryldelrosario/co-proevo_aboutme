@@ -50,9 +50,18 @@ npm run compile:sass
 Feel free to modify or add your own script to compile sass inside the <code>package.json</code> file
 
 ## Releases
+<deatails>
+    <summary>v1.3.0 - Apr 14 2023</summary>
+
+- Project Ten:
+    - Extension from v1.2.0
+    - Required one new implementation of javascript
+    - Check full release details <a href="https://github.com/daryldelrosario/co-proevo_aboutme/releases/tag/v1.3.0">here</a>
+</details>
+
 <details>
     <summary>v1.2.0 - Apr 03 2023</summary>   
-    
+
 - Project Nine:
     - Extension from v1.0.0 
     - Required implementation of javascript
