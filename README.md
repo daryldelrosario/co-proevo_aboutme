@@ -50,7 +50,7 @@ npm run compile:sass
 Feel free to modify or add your own script to compile sass inside the <code>package.json</code> file
 
 ## Releases
-<deatails>
+<details>
     <summary>v1.3.0 - Apr 14 2023</summary>
 
 - Project Ten:
