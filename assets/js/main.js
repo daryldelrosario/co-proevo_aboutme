@@ -376,6 +376,10 @@ function handleSubmit(e) {
 }
 
 // ADD EVENT LISTENERS
+exitButtons.forEach((button) => {
+    button.addEventListener("click", clearForm);
+});
+
 fname.addEventListener("input", () => removeFocusedStyle(0, fname));
 lname.addEventListener("input", () => removeFocusedStyle(1, lname));
 email.addEventListener("input", () => removeFocusedStyle(2, email));
