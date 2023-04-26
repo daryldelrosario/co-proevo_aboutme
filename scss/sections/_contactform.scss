@@ -17,5 +17,22 @@
             resize: none;
             margin-bottom: 11px;
         }
+
+        // Toggle Styles
+        .error-border {
+            border-color: red;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        .success-border {
+            border-color: green;
+        }
+        
+        .success-message {
+            color: green;
+        }
     }
 }

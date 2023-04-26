@@ -12369,3 +12369,15 @@ header svg {
   resize: none;
   margin-bottom: 11px;
 }
+.modal-dialog form .error-border {
+  border-color: red;
+}
+.modal-dialog form .error-message {
+  color: red;
+}
+.modal-dialog form .success-border {
+  border-color: green;
+}
+.modal-dialog form .success-message {
+  color: green;
+}

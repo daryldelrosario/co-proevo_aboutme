@@ -273,9 +273,91 @@ const lname = document.querySelector("#lastName");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const promptNodes = document.querySelectorAll(".prompt");
+const clearButton = document.querySelector("#clear-form");
+
+// HELPER FUNCTION: VALIDATE EMAIL
+function validateEmail(email) {
+    let checkEmail = /\S+@\S+\.\S+/;
+    return checkEmail.test(email);
+}
+
+// HELPER FUNCTION: ON ERROR
+function onError(index, element, promptMessage) {
+    promptNodes[index].classList.remove("success-message");
+    element.classList.remove("success-border");
+    promptNodes[index].classList.add("error-message");
+    element.classList.add("error-border");
+    promptNodes[index].innerText = promptMessage;
+}
+
+// HELPER FUNCTION: ON SUCCESS
+function onSuccess(index, element, promptMessage) {
+    promptNodes[index].classList.remove("error-message");
+    element.classList.remove("error-border");
+    promptNodes[index].classList.add("success-message");
+    element.classList.add("success-border");
+    promptNodes[index].innerText = promptMessage;
+}
+
+// HELPER FUNCTION: REMOVE INPUT STYLES
+function removeStyles() {
+    for(let i = 0; i < promptNodes.length; i++) {
+        promptNodes[i].innerText = "";
+        promptNodes[i].classList.remove("error-message");
+        promptNodes[i].classList.remove("success-message");
+    }
+
+    fname.classList.remove("error-border");
+    lname.classList.remove("error-border");
+    email.classList.remove("error-border");
+    message.classList.remove("error-border");
+
+    fname.classList.remove("success-border");
+    lname.classList.remove("success-border");
+    email.classList.remove("success-border");
+    message.classList.remove("success-border");
+}
 
 // FUNCTION: VALIDATE DATA
 function validateForm() {
+
+    if(fname.value.length < 1) {
+        onError(0, fname, "*first name is required");
+    } else {
+        onSuccess(0, fname, "Looks Good!");
+    }
+
+    if(lname.value.length < 1) {
+        onError(1, lname, "*last name is required");
+    } else {
+        onSuccess(1, lname, "Looks Good!");
+    }
+
+    if(email.value.length < 1) {
+        onError(2, email, "*email is required");
+    } else if(!validateEmail(email.value)) {
+        promptNodes[2].classList.add("error-message");
+        promptNodes[2].innerText = "*invalid email address";
+        email.classList.add("error-border");
+    } else {
+        onSuccess(2, email, "Looks Good!");
+    }
+
+    if(message.value.length < 1) {
+        onError(3, message, "*message is required");
+    } else {
+        onSuccess(3, message, "Looks Good!");
+    }
+}
+
+// FUNCTION: CLEAR FORM
+function clearForm() {
+    removeStyles();
+
+    fname.value = "";
+    lname.value = "";
+    email.value = "";
+    message.value = "";    
 }
 
 // FUNCTION: HANDLE SUBMIT
@@ -284,6 +366,11 @@ function handleSubmit(e) {
     validateForm();
 }
 
+// CLEAR BUTTON ON CLICK
+clearButton.addEventListener("click", clearForm);
+
 // FORM ON SUBMIT
 form.addEventListener('submit', (e) => handleSubmit(e));
+
+
 
