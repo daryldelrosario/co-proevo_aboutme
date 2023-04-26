@@ -336,9 +336,7 @@ function validateForm() {
     if(email.value.length < 1) {
         onError(2, email, "*email is required");
     } else if(!validateEmail(email.value)) {
-        promptNodes[2].classList.add("error-message");
-        promptNodes[2].innerText = "*invalid email address";
-        email.classList.add("error-border");
+        onError(2, email, "*invalid email address");
     } else {
         onSuccess(2, email, "Looks Good!");
     }
