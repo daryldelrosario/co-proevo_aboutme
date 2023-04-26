@@ -263,3 +263,27 @@ objects.forEach(object => {
     objectObserver.observe(object);
 });
 
+// =============================
+// FOR CONTACT FORM - PROJECT 11
+// =============================
+// GET ALL NECESSARY DOM ELEMENTS 
+const form = document.querySelector('form');
+const fname = document.querySelector("#firstName");
+const lname = document.querySelector("#lastName");
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const promptNodes = document.querySelectorAll(".prompt");
+
+// FUNCTION: VALIDATE DATA
+function validateForm() {
+}
+
+// FUNCTION: HANDLE SUBMIT
+function handleSubmit(e) {
+    e.preventDefault();
+    validateForm();
+}
+
+// FORM ON SUBMIT
+form.addEventListener('submit', (e) => handleSubmit(e));
+
