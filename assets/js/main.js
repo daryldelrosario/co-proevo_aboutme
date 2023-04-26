@@ -41,7 +41,7 @@ const goalsContainer = document.querySelector(".goals-container");
 
 // FOOTER SECTION
 const footerIcons = document.querySelectorAll('.footer i');
-const toTopBtn = document.querySelector('.btn-primary');
+const toTopBtn = document.querySelector('.back-to-top');
 
 // SETTING LOADED PROPERTIES
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
