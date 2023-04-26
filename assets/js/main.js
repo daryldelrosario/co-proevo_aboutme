@@ -373,6 +373,18 @@ function clearForm() {
 function handleSubmit(e) {
     e.preventDefault();
     validateForm();
+
+    let hasErrors = false;
+
+    promptNodes.forEach((node) => {
+        if(node.classList.contains("error-message")) {
+            hasErrors = true;
+        }
+    });
+
+    if(!hasErrors) {
+        alert("Success");
+    }
 }
 
 // ADD EVENT LISTENERS
