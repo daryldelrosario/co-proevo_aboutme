@@ -318,6 +318,16 @@ function removeAllStyles() {
     message.classList.remove("success-border");
 }
 
+// HELPER FUNCTION: REMOVE FOCUSED INPUT STYLES
+function removeFocusedStyle(index, element) {
+    promptNodes[index].innerText = "";
+    promptNodes[index].classList.remove("error-message");
+    promptNodes[index].classList.remove("success-message");
+
+    element.classList.remove("error-border");
+    element.classList.remove("success-border");
+}
+
 // FUNCTION: VALIDATE DATA
 function validateForm() {
 
@@ -364,11 +374,11 @@ function handleSubmit(e) {
     validateForm();
 }
 
-// CLEAR BUTTON ON CLICK
+// ADD EVENT LISTENERS
+fname.addEventListener("input", () => removeFocusedStyle(0, fname));
+lname.addEventListener("input", () => removeFocusedStyle(1, lname));
+email.addEventListener("input", () => removeFocusedStyle(2, email));
+message.addEventListener("input", () => removeFocusedStyle(3, message));
+
 clearButton.addEventListener("click", clearForm);
-
-// FORM ON SUBMIT
 form.addEventListener('submit', (e) => handleSubmit(e));
-
-
-
