@@ -12381,6 +12381,9 @@ header svg {
 .modal-dialog form .success-message {
   color: green;
 }
+.modal-dialog form .disappear {
+  display: none;
+}
 
 .form-control:focus {
   border-color: #007bff;

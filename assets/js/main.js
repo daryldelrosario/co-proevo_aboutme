@@ -268,11 +268,14 @@ objects.forEach(object => {
 // =============================
 // GET ALL NECESSARY DOM ELEMENTS 
 const form = document.querySelector('form');
+const modalTitle = document.querySelector(".modal-title");
 const fname = document.querySelector("#firstName");
 const lname = document.querySelector("#lastName");
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const promptNodes = document.querySelectorAll(".prompt");
+const contactButton = document.querySelector(".start-modal");
+const submitButton = document.querySelector(".submit");
 const clearButton = document.querySelector("#clear-form");
 const exitButtons = document.querySelectorAll(".exit-button");
 
@@ -329,19 +332,26 @@ function removeFocusedStyle(index, element) {
     element.classList.remove("success-border");
 }
 
+// HELPER FUNCTION: SETUP MODAL
+function setupModal() {
+    modalTitle.innerHTML = "Send a Message: "
+    submitButton.style.display = "";
+        clearButton.style.display = "";
+}
+
 // FUNCTION: VALIDATE DATA
 function validateForm() {
 
     if(fname.value.length < 1) {
         onError(0, fname, "*first name is required");
     } else {
-        onSuccess(0, fname, "Looks Good!");
+        onSuccess(0, fname, "✔");
     }
 
     if(lname.value.length < 1) {
         onError(1, lname, "*last name is required");
     } else {
-        onSuccess(1, lname, "Looks Good!");
+        onSuccess(1, lname, "✔");
     }
 
     if(email.value.length < 1) {
@@ -349,13 +359,13 @@ function validateForm() {
     } else if(!validateEmail(email.value)) {
         onError(2, email, "*invalid email address");
     } else {
-        onSuccess(2, email, "Looks Good!");
+        onSuccess(2, email, "✔");
     }
 
     if(message.value.length < 1) {
         onError(3, message, "*message is required");
     } else {
-        onSuccess(3, message, "Looks Good!");
+        onSuccess(3, message, "✔");
     }
 }
 
@@ -383,11 +393,33 @@ function handleSubmit(e) {
     });
 
     if(!hasErrors) {
-        alert("Success");
+        modalTitle.innerText = "Message Sent Successfully!";
+        submitButton.style.display = "none";
+        clearButton.style.display = "none";
+        
+        // setTimeout(() => {
+        //     form.submit();
+        // }, 1000);
+
+        // form.submit();
+        // setTimeout(() => {
+        //     clearForm();
+        // }, 1000);
+        
+        // setTimeout(() => {
+        //     $(".modal").fadeOut(2000, clearForm);
+        // }, 1000);
+        
+
+        // setTimeout(() => {
+        //     form.submit();
+        // }, 3000);
     }
 }
 
 // ADD EVENT LISTENERS
+contactButton.addEventListener("click", setupModal);
+
 exitButtons.forEach((button) => {
     button.addEventListener("click", clearForm);
 });

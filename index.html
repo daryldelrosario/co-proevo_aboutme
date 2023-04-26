@@ -235,7 +235,7 @@
 
                     <!-- BUTTON TRIGGER FOR MODAL -->
                     <!-- Modal Button Trigger from Bootstrap -->
-                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    <button type="button" class="btn btn-outline-light start-modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                         Say Hello
                     </button>
 
@@ -260,7 +260,7 @@
                     <button type="button" class="btn-close exit-button" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="contact-form" novalidate method="POST">
+                    <form id="contact-form" novalidate>
                         <label for="firstName" class="form-label">First Name: </label>
                         <small class="prompt"></small>
                         <input type="text" id="firstName" name="firstName" class="form-control" required>
@@ -494,6 +494,8 @@
         <i class="fas fa-chevron-up"></i>
     </a>
 
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap v5.3.0-alpha1 JS-->
     <script src="./dist/js/bootstrap.js"></script>
     <!-- Custom JavaScript for CO Project Nine -->
