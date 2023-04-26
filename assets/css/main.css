@@ -12357,3 +12357,7 @@ header svg {
 .breakme__toggle-box {
   display: none;
 }
+
+.modal-dialog .modal-content {
+  color: #000;
+}

@@ -1,1 +1,7 @@
 @use "../config/" as *;
+
+.modal-dialog {
+    .modal-content {
+        color: $black;
+    }
+}
