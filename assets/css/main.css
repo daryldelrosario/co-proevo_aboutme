@@ -12389,3 +12389,29 @@ header svg {
   border-color: #007bff;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
+.fa-message {
+  padding: 7px;
+}
+
+#start-modal-btn {
+  position: relative;
+}
+#start-modal-btn:hover {
+  cursor: pointer;
+}
+#start-modal-btn .volume-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pulse-volume 1.5s ease-in-out infinite;
+}
+#start-modal-btn .volume-animation i {
+  color: #f0ccb0;
+}
+#start-modal-btn .main-volume {
+  position: relative;
+}
+#start-modal-btn .main-volume i {
+  color: #fff;
+}
