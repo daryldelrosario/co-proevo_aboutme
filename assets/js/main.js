@@ -299,8 +299,8 @@ function onSuccess(index, element, promptMessage) {
     promptNodes[index].innerText = promptMessage;
 }
 
-// HELPER FUNCTION: REMOVE INPUT STYLES
-function removeStyles() {
+// HELPER FUNCTION: REMOVE ALL INPUT STYLES
+function removeAllStyles() {
     for(let i = 0; i < promptNodes.length; i++) {
         promptNodes[i].innerText = "";
         promptNodes[i].classList.remove("error-message");
@@ -350,7 +350,7 @@ function validateForm() {
 
 // FUNCTION: CLEAR FORM
 function clearForm() {
-    removeStyles();
+    removeAllStyles();
 
     fname.value = "";
     lname.value = "";
