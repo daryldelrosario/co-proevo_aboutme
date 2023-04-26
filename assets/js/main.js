@@ -274,6 +274,7 @@ const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const promptNodes = document.querySelectorAll(".prompt");
 const clearButton = document.querySelector("#clear-form");
+const exitButtons = document.querySelectorAll(".exit-button");
 
 // HELPER FUNCTION: VALIDATE EMAIL
 function validateEmail(email) {
