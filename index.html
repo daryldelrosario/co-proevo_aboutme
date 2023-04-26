@@ -253,18 +253,36 @@
     <!-- Static Modal From Bootstrap -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Send a  Message: </h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form class="needs-validation" novalidate>
+                        <label for="firstName" class="form-label">First Name: </label>
+                        <small>success or error Message</small>
+                        <input type="text" id="firstName" name="firstName" class="form-control" required>
+
+                        <label for="lastName" class="form-label">Last Name: </label>
+                        <small>success or error Message</small>
+                        <input type="text" id="lastName" name="lastName" class="form-control" required>
+
+                        <label for="email" class="form-label">Email: </label>
+                        <small>success or error Message</small>
+                        <input type="email" id="email" name="email" class="form-control" required>
+
+                        <label for="message">Message: </label>
+                        <small>success or error Message</small>
+                        <textarea name="message" id="message" class="form-control"></textarea>
+
+                        <button type="submit" class="btn btn-success">Send</button>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Understood</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark">Clear Form</button>
                 </div>
             </div>
         </div>

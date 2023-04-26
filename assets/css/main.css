@@ -12361,3 +12361,11 @@ header svg {
 .modal-dialog .modal-content {
   color: #000;
 }
+.modal-dialog form input {
+  margin-bottom: 11px;
+}
+.modal-dialog form textarea {
+  height: 70px;
+  resize: none;
+  margin-bottom: 11px;
+}
