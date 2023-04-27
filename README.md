@@ -6,6 +6,10 @@ This about me page is an evolving project that started with only HTML. Then we l
 <kbd><img src="./assets/vid/pro-eleven_ld.gif" alt="live demo gif of up to date project">
 
 ## Features
+- From Project Eleven: 
+    - Includes contact form with HTML and JavaScript validations
+    - Contact form pops up as a modal
+    - Access contact form from about-me section dropdown or mail icon in nav-bar
 - From Project Ten:
     - Includes JS Intersection Observer API
 - From Project Nine:
