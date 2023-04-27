@@ -336,7 +336,12 @@ function removeFocusedStyle(index, element) {
 function setupModal() {
     modalTitle.innerHTML = "Send a Message: "
     submitButton.style.display = "";
-        clearButton.style.display = "";
+    clearButton.style.display = "";
+
+    fname.disabled = false;
+    lname.disabled = false;
+    email.disabled = false;
+    message.disabled = false;
 }
 
 // FUNCTION: VALIDATE DATA
@@ -396,24 +401,11 @@ function handleSubmit(e) {
         modalTitle.innerText = "Message Sent Successfully!";
         submitButton.style.display = "none";
         clearButton.style.display = "none";
-        
-        // setTimeout(() => {
-        //     form.submit();
-        // }, 1000);
 
-        // form.submit();
-        // setTimeout(() => {
-        //     clearForm();
-        // }, 1000);
-        
-        // setTimeout(() => {
-        //     $(".modal").fadeOut(2000, clearForm);
-        // }, 1000);
-        
-
-        // setTimeout(() => {
-        //     form.submit();
-        // }, 3000);
+        fname.disabled = true;
+        lname.disabled = true;
+        email.disabled = true;
+        message.disabled = true;
     }
 }
 
