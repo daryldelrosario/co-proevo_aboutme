@@ -1,4 +1,4 @@
-# CO Project Ten - About Me Page
+# CO Project Eleven - About Me Page
 This about me page is an evolving project that started with only HTML. Then we learnt, designed and applied CSS, SCSS and now JavaScript. Each version has been documented in the `Release` Section at the bottom of this readme file. Directly below is the current live demo.
 
 ## <a href="https://daryldelrosario.github.io/co-proevo_aboutme/">Current Live Demo</a>
