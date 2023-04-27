@@ -3,7 +3,7 @@ This about me page is an evolving project that started with only HTML. Then we l
 
 ## <a href="https://daryldelrosario.github.io/co-proevo_aboutme/">Current Live Demo</a>
 
-<kbd><img src="./assets/vid/pro-ten_ld.gif" alt="live demo gif of up to date project">
+<kbd><img src="./assets/vid/pro-eleven_ld.gif" alt="live demo gif of up to date project">
 
 ## Features
 - From Project Ten:
