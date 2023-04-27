@@ -55,11 +55,22 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
 
 ## Releases
 <details>
+    <summary>v1.4.0 - Apr 27 2023</summary>
+
+- Project Eleven:
+    - Extension from v1.3.0
+    - Required one new implementation of javascript
+        - implemented contact form validation
+    - Check full release details <a href="">here</a>
+</details>
+
+<details>
     <summary>v1.3.0 - Apr 14 2023</summary>
 
 - Project Ten:
     - Extension from v1.2.0
     - Required one new implementation of javascript
+        - implemented intersection observer api
     - Check full release details <a href="https://github.com/daryldelrosario/co-proevo_aboutme/releases/tag/v1.3.0">here</a>
 </details>
 
@@ -69,6 +80,8 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
 - Project Nine:
     - Extension from v1.0.0 
     - Required implementation of javascript
+        - implemented color-toggle
+        - implemented running time-tracker
     - Check full release details <a href="https://github.com/daryldelrosario/co-pronine_aboutme/releases/tag/v1.2.0">here</a>
 </details>
 
