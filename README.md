@@ -61,7 +61,7 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
     - Extension from v1.3.0
     - Required one new implementation of javascript
         - implemented contact form validation
-    - Check full release details <a href="">here</a>
+    - Check full release details <a href="https://github.com/daryldelrosario/co-proevo_aboutme/releases/tag/v1.4.0">here</a>
 </details>
 
 <details>
