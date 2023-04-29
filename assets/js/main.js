@@ -14,34 +14,58 @@ const darkGoal = "rgba(44, 120, 108, 0.98)";
 const darkGoalP = "rgba(44, 120, 108, 0.77)";
 
 // NAV SECTION
-const nav = document.querySelector("nav");
-const navLinks = document.querySelectorAll(".nav-link");
-const darkModeToggle = document.querySelector("#dark-mode-toggle");
+const nav = $("nav");
+const navLinks = $(".nav-link");
+const darkModeToggle = $("#dark-mode-toggle");
+
+// const nav = document.querySelector("nav");
+// const navLinks = document.querySelectorAll(".nav-link");
+// const darkModeToggle = document.querySelector("#dark-mode-toggle");
 
 // HEADER SECTION
-const header = document.querySelector("header");
-const headingLines = document.querySelectorAll(".heading-line");
-const aboutMe = document.querySelector(".about-me");
-const solidFill = document.querySelector(".solid-fill");
+const header = $("header");
+const headingLines = $(".heading-line");
+const aboutMe = $(".about-me");
+const solidFill = $(".solid-fill");
+
+// const header = document.querySelector("header");
+// const headingLines = document.querySelectorAll(".heading-line");
+// const aboutMe = document.querySelector(".about-me");
+// const solidFill = document.querySelector(".solid-fill");
 
 // HOBBIES AND EXPERIENCES SECTION
-const body = document.querySelector("body");
-const waveGradient = document.getElementById("myGradient");
-const stops = waveGradient.getElementsByTagName("stop");
-const slideBorders = document.querySelectorAll(".slide");
+const body = $("body");
+const waveGradient = $("#myGradient");
+const stops = $("waveGradient").find("stop");
+const slideBorders = $(".slide");
+
+// const body = document.querySelector("body");
+// const waveGradient = document.getElementById("myGradient");
+// const stops = waveGradient.getElementsByTagName("stop");
+// const slideBorders = document.querySelectorAll(".slide");
 
 // ACHIEVEMENTS SECTION
-const achievements = document.querySelector(".achievements");
-const achievementsItem = document.querySelectorAll(".achievements__item");
-const overlays = document.querySelectorAll(".achievements__item-overlay");
+const achievements = $(".achievements");
+const achievementsItem = $(".achievements__item");
+const overlays = $(".achievements__item-overlay");
+
+// const achievements = document.querySelector(".achievements");
+// const achievementsItem = document.querySelectorAll(".achievements__item");
+// const overlays = document.querySelectorAll(".achievements__item-overlay");
 
 // GOALS SECTION
-const icon = document.querySelector(".goals__icon i");
-const goalsContainer = document.querySelector(".goals-container");
+const icon = $(".goals__icon i");
+const goalsContainer = $(".goals-container");
+
+// const icon = document.querySelector(".goals__icon i");
+// const goalsContainer = document.querySelector(".goals-container");
 
 // FOOTER SECTION
-const footerIcons = document.querySelectorAll('.footer i');
-const toTopBtn = document.querySelector('.back-to-top');
+const footerIcons = $('.footer i');
+const toTopBtn = $('.back-to-top');
+
+// const footerIcons = document.querySelectorAll('.footer i');
+// const toTopBtn = document.querySelector('.back-to-top');
 
 // SETTING LOADED PROPERTIES
 aboutMe.style.setProperty("--about-me-after-bg-color", primary);
