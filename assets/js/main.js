@@ -68,108 +68,157 @@ const toTopBtn = $('.back-to-top');
 // const toTopBtn = document.querySelector('.back-to-top');
 
 // SETTING LOADED PROPERTIES
-aboutMe.style.setProperty("--about-me-after-bg-color", primary);
-headingLines.forEach(headingLine => {
-    headingLine.style.setProperty("--heading-line-color", primary);
+aboutMe.css("--about-me-after-bg-color", primary);
+headingLines.css("--heading-line-color", primary);
+slideBorders.css("--slide-border", `7px ${primary} ridge`);
+
+icon.css({
+    background: primaryGradient,
+    "--icon-boxshadow-hover-color": primary,
 });
-slideBorders.forEach(slide => {
-    slide.style.setProperty("--slide-border", `7px ${primary} ridge`);
+
+goalsContainer.css({
+    "--goal-overlay-color": primaryGoal, 
+    "--goal-p-overlay-color": primaryGoalP,
 });
-icon.style.background = primaryGradient;
-icon.style.setProperty("--icon-boxshadow-hover-color", primary);
-goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
-goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
-toTopBtn.style.setProperty("--bs-btn-bg", primary);
-toTopBtn.style.setProperty("--bs-btn-border-color", primary);
-toTopBtn.style.setProperty("--bs-btn-hover-border-color", primaryDark);
-toTopBtn.style.setProperty("--bs-btn-hover-bg", primaryDark);
+
+toTopBtn.css({
+    "--bs-btn-bg": primary, 
+    "--bs-btn-border-color": primary,
+    "--bs-btn-hover-border-color": primaryDark,
+    "--bs-btn-hover-bg": primaryDark,
+});
+
+// aboutMe.style.setProperty("--about-me-after-bg-color", primary);
+// headingLines.forEach(headingLine => {
+//     headingLine.style.setProperty("--heading-line-color", primary);
+// });
+// slideBorders.forEach(slide => {
+//     slide.style.setProperty("--slide-border", `7px ${primary} ridge`);
+// });
+// icon.style.background = primaryGradient;
+// icon.style.setProperty("--icon-boxshadow-hover-color", primary);
+// goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
+// goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
+// toTopBtn.style.setProperty("--bs-btn-bg", primary);
+// toTopBtn.style.setProperty("--bs-btn-border-color", primary);
+// toTopBtn.style.setProperty("--bs-btn-hover-border-color", primaryDark);
+// toTopBtn.style.setProperty("--bs-btn-hover-bg", primaryDark);
 
 // FUNCTION: toggle between dark-mode and light-mode
-function darkMode() {
-    body.classList.toggle("dark-body");
-    nav.classList.toggle("dark-gradient");
-    header.classList.toggle("dark-gradient");
-    aboutMe.classList.toggle("dark-border-top");
-    achievements.classList.toggle("dark-gradient");
+function darkMode(){
+    body.toggleClass("dark-body");
+    nav.toggleClass("dark-gradient");
+    header.toggleClass("dark-gradient");
+    aboutMe.toggleClass("dark-border-top");
+    achievements.toggleClass("dark-gradient");
 
-    if(aboutMe.classList.contains('dark-border-top')) {
-        navLinks.forEach(link => {
-            link.addEventListener("mouseover", function() {
-                link.style.color = primaryDark;
-            })
-            link.addEventListener("mouseout", function() {
-                link.style.color = "";
+    if(body.hasClass("dark-body")) {
+        navLinks.each(function() {
+            $(this).hover(function() {
+                $(this).css("color", primaryDark);
+            }, function() {
+                $(this).css("color", "");
             });
         });
-        aboutMe.style.borderTop = "7px solid " + primaryDark;
-        achievementsItem.forEach(item => {
-            item.style.borderTop = "5px solid " + primaryDark;
-        });
-        aboutMe.style.setProperty("--about-me-after-bg-color", primaryDark);
-        overlays.forEach(overlay => {
-            overlay.style.backgroundColor = `rgba(44, 120, 108, 0.88)`;
-        });
-        headingLines.forEach(headingLine => {
-            headingLine.style.setProperty("--heading-line-color", primaryDark);
-        });
-        solidFill.setAttribute("fill", secondaryDark);
-        stops[0].setAttribute("stop-color", primaryDark);
-        stops[1].setAttribute("stop-color", secondaryDark);
-        slideBorders.forEach(slide => {
-            slide.style.setProperty("--slide-border", `7px ${primaryDark} ridge`);
-        });
-        icon.style.background = darkGradient;
-        icon.style.setProperty("--icon-boxshadow-hover-color", primaryDark);
-        goalsContainer.style.setProperty("--goal-overlay-color", darkGoal);
-        goalsContainer.style.setProperty("--goal-p-overlay-color", darkGoalP);
-        footerIcons.forEach(icon => {
-            icon.style.color = primaryDark;
-        });
-        toTopBtn.style.setProperty("--bs-btn-bg", primaryDark);
-        toTopBtn.style.setProperty("--bs-btn-border-color", primaryDark);
-        toTopBtn.style.setProperty("--bs-btn-hover-border-color", primary);
-        toTopBtn.style.setProperty("--bs-btn-hover-bg", primary);
     } else {
-        navLinks.forEach(link => {
-            link.addEventListener("mouseover", function() {
-                link.style.color = primary;
-            })
-            link.addEventListener("mouseout", function() {
-                link.style.color = "";
+        navLinks.each(function() {
+            $(this).hover(function() {
+                $(this).css("color", primary);
+            }, function() {
+                $(this).css("color", "");
             });
         });
-        aboutMe.style.borderTop = "7px solid " + primary;
-        achievementsItem.forEach(item => {
-            item.style.borderTop = "5px solid " + primary;
-        });
-        aboutMe.style.setProperty("--about-me-after-bg-color", primary);
-        overlays.forEach(overlay => {
-            overlay.style.backgroundColor = `rgba(235, 70, 55, 0.88)`;
-        });
-        headingLines.forEach(headingLine => {
-            headingLine.style.setProperty("--heading-line-color", primary);
-        });
-        solidFill.setAttribute("fill", secondary);
-        stops[0].setAttribute("stop-color", primary);
-        stops[1].setAttribute("stop-color", secondary);
-        slideBorders.forEach(slide => {
-            slide.style.setProperty("--slide-border", `7px ${primary} ridge`);
-        });
-        icon.style.background = primaryGradient;
-        icon.style.setProperty("--icon-boxshadow-hover-color", primary);
-        goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
-        goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
-        footerIcons.forEach(icon => {
-            icon.style.color = primary;
-        });
-        toTopBtn.style.setProperty("--bs-btn-bg", primary)
-        toTopBtn.style.setProperty("--bs-btn-border-color", primary);
-        toTopBtn.style.setProperty("--bs-btn-hover-border-color", primaryDark);
-        toTopBtn.style.setProperty("--bs-btn-hover-bg", primaryDark);
     }
 }
 
-darkModeToggle.addEventListener("click", darkMode);
+$(darkModeToggle).click(darkMode);
+
+// function darkMode() {
+//     body.classList.toggle("dark-body");
+//     nav.classList.toggle("dark-gradient");
+//     header.classList.toggle("dark-gradient");
+//     aboutMe.classList.toggle("dark-border-top");
+//     achievements.classList.toggle("dark-gradient");
+
+//     if(aboutMe.classList.contains('dark-border-top')) {
+//         navLinks.forEach(link => {
+//             link.addEventListener("mouseover", function() {
+//                 link.style.color = primaryDark;
+//             })
+//             link.addEventListener("mouseout", function() {
+//                 link.style.color = "";
+//             });
+//         });
+//         aboutMe.style.borderTop = "7px solid " + primaryDark;
+//         achievementsItem.forEach(item => {
+//             item.style.borderTop = "5px solid " + primaryDark;
+//         });
+//         aboutMe.style.setProperty("--about-me-after-bg-color", primaryDark);
+//         overlays.forEach(overlay => {
+//             overlay.style.backgroundColor = `rgba(44, 120, 108, 0.88)`;
+//         });
+//         headingLines.forEach(headingLine => {
+//             headingLine.style.setProperty("--heading-line-color", primaryDark);
+//         });
+//         solidFill.setAttribute("fill", secondaryDark);
+//         stops[0].setAttribute("stop-color", primaryDark);
+//         stops[1].setAttribute("stop-color", secondaryDark);
+//         slideBorders.forEach(slide => {
+//             slide.style.setProperty("--slide-border", `7px ${primaryDark} ridge`);
+//         });
+//         icon.style.background = darkGradient;
+//         icon.style.setProperty("--icon-boxshadow-hover-color", primaryDark);
+//         goalsContainer.style.setProperty("--goal-overlay-color", darkGoal);
+//         goalsContainer.style.setProperty("--goal-p-overlay-color", darkGoalP);
+//         footerIcons.forEach(icon => {
+//             icon.style.color = primaryDark;
+//         });
+//         toTopBtn.style.setProperty("--bs-btn-bg", primaryDark);
+//         toTopBtn.style.setProperty("--bs-btn-border-color", primaryDark);
+//         toTopBtn.style.setProperty("--bs-btn-hover-border-color", primary);
+//         toTopBtn.style.setProperty("--bs-btn-hover-bg", primary);
+//     } else {
+//         navLinks.forEach(link => {
+//             link.addEventListener("mouseover", function() {
+//                 link.style.color = primary;
+//             })
+//             link.addEventListener("mouseout", function() {
+//                 link.style.color = "";
+//             });
+//         });
+//         aboutMe.style.borderTop = "7px solid " + primary;
+//         achievementsItem.forEach(item => {
+//             item.style.borderTop = "5px solid " + primary;
+//         });
+//         aboutMe.style.setProperty("--about-me-after-bg-color", primary);
+//         overlays.forEach(overlay => {
+//             overlay.style.backgroundColor = `rgba(235, 70, 55, 0.88)`;
+//         });
+//         headingLines.forEach(headingLine => {
+//             headingLine.style.setProperty("--heading-line-color", primary);
+//         });
+//         solidFill.setAttribute("fill", secondary);
+//         stops[0].setAttribute("stop-color", primary);
+//         stops[1].setAttribute("stop-color", secondary);
+//         slideBorders.forEach(slide => {
+//             slide.style.setProperty("--slide-border", `7px ${primary} ridge`);
+//         });
+//         icon.style.background = primaryGradient;
+//         icon.style.setProperty("--icon-boxshadow-hover-color", primary);
+//         goalsContainer.style.setProperty("--goal-overlay-color", primaryGoal);
+//         goalsContainer.style.setProperty("--goal-p-overlay-color", primaryGoalP);
+//         footerIcons.forEach(icon => {
+//             icon.style.color = primary;
+//         });
+//         toTopBtn.style.setProperty("--bs-btn-bg", primary)
+//         toTopBtn.style.setProperty("--bs-btn-border-color", primary);
+//         toTopBtn.style.setProperty("--bs-btn-hover-border-color", primaryDark);
+//         toTopBtn.style.setProperty("--bs-btn-hover-bg", primaryDark);
+//     }
+// }
+
+// darkModeToggle.addEventListener("click", darkMode);
 
 // =====================
 // FOR JAVA SCRIPT TIMER 
