@@ -422,17 +422,29 @@ objects.each(function () {
 // FOR CONTACT FORM - PROJECT 11
 // =============================
 // GET ALL NECESSARY DOM ELEMENTS 
-const form = document.querySelector('form');
-const modalTitle = document.querySelector(".modal-title");
-const fname = document.querySelector("#firstName");
-const lname = document.querySelector("#lastName");
-const email = document.querySelector("#email");
-const message = document.querySelector("#message");
-const promptNodes = document.querySelectorAll(".prompt");
-const contactButton = document.querySelector(".start-modal");
-const submitButton = document.querySelector(".submit");
-const clearButton = document.querySelector("#clear-form");
-const exitButtons = document.querySelectorAll(".exit-button");
+const form = $('form');
+const modalTitle = $(".modal-title");
+const fname = $("#firstName");
+const lname = $("#lastName");
+const email = $("#email");
+const message = $("#message");
+const promptNodes = $(".prompt");
+const contactButton = $(".start-modal");
+const submitButton = $(".submit");
+const clearButton = $("#clear-form");
+const exitButtons = $(".exit-button");
+
+// const form = document.querySelector('form');
+// const modalTitle = document.querySelector(".modal-title");
+// const fname = document.querySelector("#firstName");
+// const lname = document.querySelector("#lastName");
+// const email = document.querySelector("#email");
+// const message = document.querySelector("#message");
+// const promptNodes = document.querySelectorAll(".prompt");
+// const contactButton = document.querySelector(".start-modal");
+// const submitButton = document.querySelector(".submit");
+// const clearButton = document.querySelector("#clear-form");
+// const exitButtons = document.querySelectorAll(".exit-button");
 
 // HELPER FUNCTION: VALIDATE EMAIL
 function validateEmail(email) {
@@ -442,139 +454,260 @@ function validateEmail(email) {
 
 // HELPER FUNCTION: ON ERROR
 function onError(index, element, promptMessage) {
-    promptNodes[index].classList.remove("success-message");
-    element.classList.remove("success-border");
-    promptNodes[index].classList.add("error-message");
-    element.classList.add("error-border");
-    promptNodes[index].innerText = promptMessage;
+    promptNodes.eq(index).removeClass("success-message");
+    element.removeClass("success-border");
+    promptNodes.eq(index).addClass("error-message");
+    element.addClass("error-border");
+    promptNodes.eq(index).text(promptMessage);
 }
 
 // HELPER FUNCTION: ON SUCCESS
 function onSuccess(index, element, promptMessage) {
-    promptNodes[index].classList.remove("error-message");
-    element.classList.remove("error-border");
-    promptNodes[index].classList.add("success-message");
-    element.classList.add("success-border");
-    promptNodes[index].innerText = promptMessage;
+    promptNodes.eq(index).removeClass("error-message");
+    element.removeClass("error-border");
+    promptNodes.eq(index).addClass("success-message");
+    element.addClass("success-border");
+    promptNodes.eq(index).text(promptMessage);
 }
 
 // HELPER FUNCTION: REMOVE ALL INPUT STYLES
 function removeAllStyles() {
-    for(let i = 0; i < promptNodes.length; i++) {
-        promptNodes[i].innerText = "";
-        promptNodes[i].classList.remove("error-message");
-        promptNodes[i].classList.remove("success-message");
-    }
+    promptNodes.each(function() {
+        $(this).text("").removeClass("error-message success-message");
+    });
 
-    fname.classList.remove("error-border");
-    lname.classList.remove("error-border");
-    email.classList.remove("error-border");
-    message.classList.remove("error-border");
-
-    fname.classList.remove("success-border");
-    lname.classList.remove("success-border");
-    email.classList.remove("success-border");
-    message.classList.remove("success-border");
+    fname.add(lname).add(email).add(message).removeClass("error-border success-border");
 }
+
+// function removeAllStyles() {
+//     for(let i = 0; i < promptNodes.length; i++) {
+//         promptNodes[i].innerText = "";
+//         promptNodes[i].classList.remove("error-message");
+//         promptNodes[i].classList.remove("success-message");
+//     }
+
+//     fname.classList.remove("error-border");
+//     lname.classList.remove("error-border");
+//     email.classList.remove("error-border");
+//     message.classList.remove("error-border");
+
+//     fname.classList.remove("success-border");
+//     lname.classList.remove("success-border");
+//     email.classList.remove("success-border");
+//     message.classList.remove("success-border");
+// }
 
 // HELPER FUNCTION: REMOVE FOCUSED INPUT STYLES
 function removeFocusedStyle(index, element) {
-    promptNodes[index].innerText = "";
-    promptNodes[index].classList.remove("error-message");
-    promptNodes[index].classList.remove("success-message");
+    promptNodes.eq(index).text("");
+    promptNodes.eq(index).removeClass("error-message success-message");
 
-    element.classList.remove("error-border");
-    element.classList.remove("success-border");
+    element.removeClass("error-border success-border");
 }
+
+// function removeFocusedStyle(index, element) {
+//     promptNodes[index].innerText = "";
+//     promptNodes[index].classList.remove("error-message");
+//     promptNodes[index].classList.remove("success-message");
+
+//     element.classList.remove("error-border");
+//     element.classList.remove("success-border");
+// }
 
 // HELPER FUNCTION: SETUP MODAL
 function setupModal() {
-    modalTitle.innerHTML = "Send a Message: "
-    submitButton.style.display = "";
-    clearButton.style.display = "";
+    modalTitle.html("Send a Message: ");
+    submitButton.show();
+    clearButton.show();
 
-    fname.disabled = false;
-    lname.disabled = false;
-    email.disabled = false;
-    message.disabled = false;
+    fname.prop("disabled", false);
+    lname.prop("disabled", false);
+    email.prop("disabled", false);
+    message.prop("disabled", false);
 }
+
+// function setupModal() {
+//     modalTitle.innerHTML = "Send a Message: "
+//     submitButton.style.display = "";
+//     clearButton.style.display = "";
+
+//     fname.disabled = false;
+//     lname.disabled = false;
+//     email.disabled = false;
+//     message.disabled = false;
+// }
 
 // FUNCTION: VALIDATE DATA
 function validateForm() {
-
-    if(fname.value.length < 1) {
+    if(fname.val().length < 1) {
         onError(0, fname, "*first name is required");
     } else {
         onSuccess(0, fname, "✔");
     }
 
-    if(lname.value.length < 1) {
+    if(lname.val().length < 1) {
         onError(1, lname, "*last name is required");
     } else {
         onSuccess(1, lname, "✔");
     }
 
-    if(email.value.length < 1) {
+    if(email.val().length < 1) {
         onError(2, email, "*email is required");
-    } else if(!validateEmail(email.value)) {
+    } else if(!validateEmail(email.val())) {
         onError(2, email, "*invalid email address");
     } else {
         onSuccess(2, email, "✔");
     }
 
-    if(message.value.length < 1) {
+    if(message.val().length < 1) {
         onError(3, message, "*message is required");
     } else {
         onSuccess(3, message, "✔");
     }
 }
 
+// function validateForm() {
+
+//     if(fname.value.length < 1) {
+//         onError(0, fname, "*first name is required");
+//     } else {
+//         onSuccess(0, fname, "✔");
+//     }
+
+//     if(lname.value.length < 1) {
+//         onError(1, lname, "*last name is required");
+//     } else {
+//         onSuccess(1, lname, "✔");
+//     }
+
+//     if(email.value.length < 1) {
+//         onError(2, email, "*email is required");
+//     } else if(!validateEmail(email.value)) {
+//         onError(2, email, "*invalid email address");
+//     } else {
+//         onSuccess(2, email, "✔");
+//     }
+
+//     if(message.value.length < 1) {
+//         onError(3, message, "*message is required");
+//     } else {
+//         onSuccess(3, message, "✔");
+//     }
+// }
+
 // FUNCTION: CLEAR FORM
 function clearForm() {
     removeAllStyles();
-
-    fname.value = "";
-    lname.value = "";
-    email.value = "";
-    message.value = "";    
+    fname.val("");
+    lname.val("");
+    email.val("");
+    message.val("");  
 }
 
+// function clearForm() {
+//     removeAllStyles();
+
+//     fname.value = "";
+//     lname.value = "";
+//     email.value = "";
+//     message.value = "";    
+// }
+
 // FUNCTION: HANDLE SUBMIT
-function handleSubmit(e) {
+function handleSubmit(e){
     e.preventDefault();
     validateForm();
 
     let hasErrors = false;
 
-    promptNodes.forEach((node) => {
-        if(node.classList.contains("error-message")) {
+    promptNodes.each(function() {
+        if($(this).hasClass("error-message")) {
             hasErrors = true;
         }
     });
 
     if(!hasErrors) {
-        modalTitle.innerText = "Message Sent Successfully!";
-        submitButton.style.display = "none";
-        clearButton.style.display = "none";
+        modalTitle.text("Message Sent Successfully!");
+        submitButton.hide();
+        clearButton.hide();
 
-        fname.disabled = true;
-        lname.disabled = true;
-        email.disabled = true;
-        message.disabled = true;
+        fname.prop("disabled", true);
+        lname.prop("disabled", true);
+        email.prop("disabled", true);
+        message.prop("disabled", true);
     }
 }
 
+// function handleSubmit(e) {
+//     e.preventDefault();
+//     validateForm();
+
+//     let hasErrors = false;
+
+//     promptNodes.forEach((node) => {
+//         if(node.classList.contains("error-message")) {
+//             hasErrors = true;
+//         }
+//     });
+
+//     if(!hasErrors) {
+//         modalTitle.innerText = "Message Sent Successfully!";
+//         submitButton.style.display = "none";
+//         clearButton.style.display = "none";
+
+//         fname.disabled = true;
+//         lname.disabled = true;
+//         email.disabled = true;
+//         message.disabled = true;
+//     }
+// }
+
 // ADD EVENT LISTENERS
-contactButton.addEventListener("click", setupModal);
 
-exitButtons.forEach((button) => {
-    button.addEventListener("click", clearForm);
+form.on("submit", (e) => handleSubmit(e));
+contactButton.on("click", setupModal);
+exitButtons.each(function() {
+    $(this).click(clearForm);
 });
+clearButton.on("click", clearForm);
+fname.on("input", () => removeFocusedStyle(0, fname));
+lname.on("input", () => removeFocusedStyle(1, lname));
+email.on("input", () => removeFocusedStyle(2, email));
+message.on("input", () => removeFocusedStyle(3, message));
 
-fname.addEventListener("input", () => removeFocusedStyle(0, fname));
-lname.addEventListener("input", () => removeFocusedStyle(1, lname));
-email.addEventListener("input", () => removeFocusedStyle(2, email));
-message.addEventListener("input", () => removeFocusedStyle(3, message));
+// $(function() {
+//     $("#contactButton").click(setupModal);
+//     $("#fname").on("input", function() {
+//         removeFocusedStyle(0, $(this));
+//     });
+//     $("#lname").on("input", function() {
+//         removeFocusedStyle(1, $(this));
+//     });
+//     $("#email").on("input", function() {
+//         removeFocusedStyle(2, $(this));
+//     });
+//     $("#message").on("input", function() {
+//         removeFocusedStyle(3, $(this));
+//     });
+//     $("#clearButton").click(clearForm);
+//     $(".exit").click(function() {
+//         clearForm();
+//     });
+//     $("#form").submit(function(e) {
+//         handleSubmit(e);
+//     });
+// });
 
-clearButton.addEventListener("click", clearForm);
-form.addEventListener('submit', (e) => handleSubmit(e));
+// contactButton.addEventListener("click", setupModal);
+
+// exitButtons.forEach((button) => {
+//     button.addEventListener("click", clearForm);
+// });
+
+// fname.addEventListener("input", () => removeFocusedStyle(0, fname));
+// lname.addEventListener("input", () => removeFocusedStyle(1, lname));
+// email.addEventListener("input", () => removeFocusedStyle(2, email));
+// message.addEventListener("input", () => removeFocusedStyle(3, message));
+
+// clearButton.addEventListener("click", clearForm);
+// form.addEventListener('submit', (e) => handleSubmit(e));
