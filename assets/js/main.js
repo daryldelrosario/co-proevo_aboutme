@@ -374,6 +374,7 @@ const timer = setInterval(function() {
     // }
 }, 1000); // Update every second (1000 milliseconds)
 
+// REFACTORED UP TO HERE:
 //=============================
 //FOR INTERSECTION OBSERVER API
 //=============================
