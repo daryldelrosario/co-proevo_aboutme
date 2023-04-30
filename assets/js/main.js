@@ -379,8 +379,10 @@ const timer = setInterval(function() {
 //FOR INTERSECTION OBSERVER API
 //=============================
 // DOM ELEMENTS TO MANIPULATE FOR INTERESECTION OBSERVER API
-const headers = document.querySelectorAll(".move-header");
-const objects = document.querySelectorAll(".move-object");
+const headers = $(".move-header");
+const objects = $(".move-object");
+// const headers = document.querySelectorAll(".move-header");
+// const objects = document.querySelectorAll(".move-object");
 
 const options = {
     threshold: 0.5
@@ -390,9 +392,9 @@ const options = {
 const headerObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
-            entry.target.classList.add("fade-effect");
+            $(entry.target).addClass("fade-effect");
         } else {
-            entry.target.classList.remove("fade-effect");
+            $(entry.target).removeClass("fade-effect");
         }
     });
 }, options);
@@ -400,20 +402,20 @@ const headerObserver = new IntersectionObserver((entries) => {
 const objectObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
-            entry.target.classList.add("slide-effect");
+            $(entry.target).addClass("slide-effect");
         } else {
-            entry.target.classList.remove("slide-effect");
+            $(entry.target).removeClass("slide-effect");
         }
     });
 }, options);
 
 // APPLICATION OF OBSERVER API ON DOM ELEMENTS
-headers.forEach(header => {
-    headerObserver.observe(header);
+headers.each(function () {
+    headerObserver.observe($(this)[0]);
 });
 
-objects.forEach(object => {
-    objectObserver.observe(object);
+objects.each(function () {
+    objectObserver.observe($(this)[0]);
 });
 
 // =============================
