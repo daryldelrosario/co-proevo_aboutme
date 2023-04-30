@@ -36,7 +36,7 @@ const solidFill = $(".solid-fill");
 // HOBBIES AND EXPERIENCES SECTION
 const body = $("body");
 const waveGradient = $("#myGradient");
-const stops = $("waveGradient").find("stop");
+const stops = $("stop", waveGradient);
 const slideBorders = $(".slide");
 
 // const body = document.querySelector("body");
@@ -121,6 +121,32 @@ function darkMode(){
                 $(this).css("color", "");
             });
         });
+        aboutMe.css({
+            "border-top": `7px solid ${primaryDark}`,
+            "--about-me-after-bg-color": primaryDark,
+        });
+        achievementsItem.css("border-top", `5px solid ${primaryDark}`);
+        overlays.css("background-color", "rgba(44, 120, 108, 0.88)");
+        headingLines.css("--heading-line-color", primaryDark);
+        solidFill.attr("fill", secondaryDark);
+        stops.eq(0).attr("stop-color", primaryDark);
+        stops.eq(1).attr("stop-color", secondaryDark);
+        slideBorders.css("--slide-border", `7px ${primaryDark} ridge`);
+        icon.css({
+            "background": darkGradient,
+            "--icon-boxshadow-hover-color": primaryDark,
+        });
+        goalsContainer.css({
+            "--goal-overlay-color": darkGoal,
+            "--goal-p-overlay-color": darkGoalP,
+        });
+        footerIcons.css("color", primaryDark);
+        toTopBtn.css({
+            "--bs-btn-bg": primaryDark,
+            "--bs-btn-border-color": primaryDark,
+            "--bs-btn-hover-border-color": primary,
+            "--bs-btn-hover-bg": primary,
+        });
     } else {
         navLinks.each(function() {
             $(this).hover(function() {
@@ -128,6 +154,32 @@ function darkMode(){
             }, function() {
                 $(this).css("color", "");
             });
+        });
+        aboutMe.css({
+            "border-top": `7px solid ${primary}`,
+            "--about-me-after-bg-color": primary,
+        });
+        achievementsItem.css("border-top", `5px solid ${primary}`);
+        overlays.css("background-color", "rgba(235, 70, 55, 0.88)");
+        headingLines.css("--heading-line-color", primary);
+        solidFill.attr("fill", secondary);
+        stops.eq(0).attr("stop-color", primary);
+        stops.eq(1).attr("stop-color", secondary);
+        slideBorders.css("--slide-border", `7px ${primary} ridge`);
+        icon.css({
+            "background": primaryGradient,
+            "--icon-boxshadow-hover-color": primary,
+        });
+        goalsContainer.css({
+            "--goal-overlay-color": primaryGoal,
+            "--goal-p-overlay-color": primaryGoalP,
+        });
+        footerIcons.css("color", primary);
+        toTopBtn.css({
+            "--bs-btn-bg": primary,
+            "--bs-btn-border-color": primary,
+            "--bs-btn-hover-border-color": primaryDark,
+            "--bs-btn-hover-bg": primaryDark,
         });
     }
 }
