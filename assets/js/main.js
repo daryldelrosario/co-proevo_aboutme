@@ -178,8 +178,8 @@ function darkMode(){
         toTopBtn.css({
             "--bs-btn-bg": primary,
             "--bs-btn-border-color": primary,
-            "--bs-btn-hover-border-color": primaryDark,
-            "--bs-btn-hover-bg": primaryDark,
+            "--bs-btn-hover-border-color": primary,
+            "--bs-btn-hover-bg": primary,
         });
     }
 }
@@ -278,17 +278,31 @@ $(darkModeToggle).click(darkMode);
 // DOM VARIABLES FOR JAVASCRIPT TIMER
 const myStartDate = "August 1, 2021 00:00:00"; // Learn to code start date
 const calcStartDate = new Date(myStartDate).getTime();
-const startedCoding = document.getElementById("started-coding-container");
-const yearBox = document.getElementById("year-js");
-const dayBox = document.getElementById("day-js");
-const hourBox = document.getElementById("hour-js");
-const minBox = document.getElementById("minute-js");
-const secondsBox = document.getElementById("second-js");
-const yearCaption = document.getElementById("year-text");
-const dayCaption = document.getElementById("day-text");
-const hourCaption = document.getElementById("hour-text");
-const minCaption = document.getElementById("minute-text");
-const secondsCaption = document.getElementById("second-text");
+const startedCoding = $("#started-coding-container");
+const yearBox = $("#year-js");
+const dayBox = $("#day-js");
+const hourBox = $("#hour-js");
+const minBox = $("#minute-js");
+const secondsBox = $("#second-js");
+const yearCaption = $("#year-text");
+const dayCaption = $("#day-text");
+const hourCaption = $("#hour-text");
+const minCaption = $("#minute-text");
+const secondsCaption = $("#second-text");
+
+// const myStartDate = "August 1, 2021 00:00:00"; // Learn to code start date
+// const calcStartDate = new Date(myStartDate).getTime();
+// const startedCoding = document.getElementById("started-coding-container");
+// const yearBox = document.getElementById("year-js");
+// const dayBox = document.getElementById("day-js");
+// const hourBox = document.getElementById("hour-js");
+// const minBox = document.getElementById("minute-js");
+// const secondsBox = document.getElementById("second-js");
+// const yearCaption = document.getElementById("year-text");
+// const dayCaption = document.getElementById("day-text");
+// const hourCaption = document.getElementById("hour-text");
+// const minCaption = document.getElementById("minute-text");
+// const secondsCaption = document.getElementById("second-text");
 
 
 // Time conversion to milliseconds
@@ -310,41 +324,54 @@ const timer = setInterval(function() {
     const minutes = Math.floor((passedTime % msHour) / msMinute);
     const seconds = Math.floor((passedTime % msMinute) / msSecond);
 
-    yearBox.textContent = years;
-    dayBox.textContent = days;
-    hourBox.textContent = hours;
-    minBox.textContent = minutes;
-    secondsBox.textContent = seconds;
+    yearBox.text(years);
+    dayBox.text(days);
+    hourBox.text(hours);
+    minBox.text(minutes);
+    secondsBox.text(seconds);
 
-    if(years <= 1) {
-        yearCaption.textContent = "Year";
-    } else {
-        yearCaption.textContent = "Years";
-    }
+    yearCaption.text(years <=1 ? "Year" : "Years");
+    dayCaption.text(days <=1 ? "Day" : "Days");
+    hourCaption.text(hours <=1 ? "Hour" : "Hours");
+    minCaption.text(minutes <=1 ? "Minute" : "Minutes");
+    secondsCaption.text(seconds <=1 ? "Second" : "Seconds");
 
-    if(days <= 1) {
-        dayCaption.textContent = "Day";
-    } else {
-        dayCaption.textContent = "Days";
-    }
 
-    if(hours <= 1) {
-        hourCaption.textContent = "Hour";
-    } else {
-        hourCaption.textContent = "Hours";
-    }
+    // yearBox.textContent = years;
+    // dayBox.textContent = days;
+    // hourBox.textContent = hours;
+    // minBox.textContent = minutes;
+    // secondsBox.textContent = seconds;
 
-    if(minutes <= 1) {
-        minCaption.textContent = "Minute";
-    } else {
-        minCaption.textContent = "Minutes";
-    }
+    // if(years <= 1) {
+    //     yearCaption.textContent = "Year";
+    // } else {
+    //     yearCaption.textContent = "Years";
+    // }
 
-    if(seconds <= 1) {
-        secondsCaption.textContent = "Second";
-    } else {
-        secondsCaption.textContent = "Seconds";
-    }
+    // if(days <= 1) {
+    //     dayCaption.textContent = "Day";
+    // } else {
+    //     dayCaption.textContent = "Days";
+    // }
+
+    // if(hours <= 1) {
+    //     hourCaption.textContent = "Hour";
+    // } else {
+    //     hourCaption.textContent = "Hours";
+    // }
+
+    // if(minutes <= 1) {
+    //     minCaption.textContent = "Minute";
+    // } else {
+    //     minCaption.textContent = "Minutes";
+    // }
+
+    // if(seconds <= 1) {
+    //     secondsCaption.textContent = "Second";
+    // } else {
+    //     secondsCaption.textContent = "Seconds";
+    // }
 }, 1000); // Update every second (1000 milliseconds)
 
 //=============================
