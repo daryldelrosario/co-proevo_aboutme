@@ -394,76 +394,110 @@ modalBody.css({
 });
 
 // Define the data for the timeline
-// Define the data for the timeline
-var data = [
+const data = [
     { date: "1986-12-04", event: "Birth", thumbnail: "assets/img/1986_mom.jpg" },
-  { date: "1987-12-04", event: "First birthday", thumbnail: "assets/img/1987_dad.jpg" },
-  { date: "1992-03-11", event: "Brother's birth", thumbnail: "assets/img/1992_brother.jpg" },
-  { date: "2007-09-04", event: "DNA first meet", thumbnail: "assets/img/2007_dna.jpg" },
-  { date: "2010-06-01", event: "Philippines", thumbnail: "assets/img/2010_lola.jpg" },
-  { date: "2017-07-03", event: "DNA wedding", thumbnail: "assets/img/2017_dna.jpg" },
-  { date: "2021-11-24", event: "Birth of first son", thumbnail: "assets/img/2021_cad.jpg" }
-  ];
-  
-  // Define the dimensions and margins of the visualization
-  var margin = { top: 50, right: 30, bottom: 30, left: 60 };
-  var width = 600 - margin.left - margin.right;
-  var height = 200 - margin.top - margin.bottom;
-  
-  // Parse the date/time values
-  var parseTime = d3.timeParse("%Y-%m-%d");
-  
-  // Create the x-scale for the timeline
-  var x = d3.scaleTime()
+    { date: "1992-03-11", event: "Brother's birth", thumbnail: "assets/img/1992_brother.jpg" },
+    { date: "2007-09-04", event: "DNA first meet", thumbnail: "assets/img/2007_dna.jpg" },
+    { date: "2010-06-01", event: "Philippines", thumbnail: "assets/img/2010_lola.jpg" },
+    { date: "2017-07-03", event: "DNA wedding", thumbnail: "assets/img/2017_dna.jpg" },
+    { date: "2021-11-24", event: "Birth of first son", thumbnail: "assets/img/2021_cad.jpg" }
+];
+
+// Define the dimensions and margins of the visualization
+const margin = { top: 20, right: 30, bottom: 30, left: 30 };
+const width = 800 - margin.left - margin.right;
+const height = 400 - margin.top - margin.bottom;
+
+// Parse the date/time values
+const parseTime = d3.timeParse("%Y-%m-%d");
+
+// Create the x-scale for the timeline
+const x = d3.scaleTime()
     .domain([parseTime("1986-12-04"), new Date()])
-    .range([0, width]);
-  
-  // Create the SVG container for the visualization
-  var svg = d3.select("#timeline")
+    .range([0, width - 100]);
+
+// Create the SVG container for the visualization
+const svg = d3.select("#timeline")
     .append("svg")
+    .attr("class", "timeline-svg") // add class
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-  
-  // Add the timeline axis
-  svg.append("g")
+
+
+// Add the timeline axis
+svg.append("g")
     .attr("transform", "translate(0," + height / 2 + ")")
     .call(d3.axisBottom(x)
-      .tickSize(0)
-      .tickPadding(10));
-  
-  // Add the timeline events and thumbnails
-  svg.selectAll(".event")
+        .tickSize(0)
+        .tickPadding(10));
+
+// Add the timeline events and thumbnails
+svg.selectAll(".event")
     .data(data)
     .enter().append("g")
     .attr("class", "event")
-    .attr("transform", function(d) { return "translate(" + x(parseTime(d.date)) + "," + height / 2 + ")"; })
+    .attr("transform", function (d) { return "translate(" + x(parseTime(d.date)) + "," + height / 2 + ")"; })
     .append("circle")
     .attr("r", 5)
     .attr("fill", "#333")
-    .on("mouseover", function(d) {
-      // Add tooltip or other interactive behavior here
+    .on("mouseover", function (d) {
+        // Add tooltip or other interactive behavior here
     })
-    .on("mouseout", function(d) {
-      // Remove tooltip or other interactive behavior here
+    .on("mouseout", function (d) {
+        // Remove tooltip or other interactive behavior here
     });
-  
-  svg.selectAll(".thumbnail")
+
+    // Add the thumbnail images
+    svg.selectAll(".thumbnail")
     .data(data)
     .enter().append("g")
     .attr("class", "thumbnail")
-    .attr("transform", function(d) { return "translate(" + x(parseTime(d.date)) + "," + (height / 2 + 20) + ")"; })
+    .attr("transform", function (d) { return "translate(" + (x(parseTime(d.date)) - 15) + "," + (height / 2 + 20) + ")"; })
     .append("image")
-    .attr("xlink:href", function(d) { return d.thumbnail; })
+    .attr("xlink:href", function (d) { return d.thumbnail; })
     .attr("width", 30)
     .attr("height", 30)
-    .on("mouseover", function(d) {
-      // Add tooltip or other interactive behavior here
+    .attr("x", -2) // add this line to center the image underneath the year label
+    .on("mouseover", function (d) {
+       //
     })
-    .on("mouseout", function(d) {
-      // Remove tooltip or other interactive behavior here
+    .on("mouseout", function (d) {
+        //
     });
-  
-  
-  
+
+
+
+
+
+// Add the year labels
+svg.selectAll(".year-label")
+    .data(data)
+    .enter().append("g")
+    .attr("class", "year-label")
+    .attr("transform", function (d) { return "translate(" + x(parseTime(d.date)) + "," + (height / 2 - 20) + ")"; })
+    .append("rect") // Add a rect behind the text
+    .attr("width", 30)
+    .attr("height", 20)
+    .attr("x", -15)
+    .attr("y", -10)
+    .attr("opacity", 0) // Make the rect transparent
+    .on("mouseover", function (d) {
+        //
+    })
+    .on("mouseout", function (d) {
+        //
+    })
+    .merge(svg.selectAll(".year-label rect")) // Merge the rect selection with the existing one
+    .transition()
+    .duration(1000)
+    .attr("transform", function (d) { return "translate(" + x(parseTime(d.date)) + "," + (height / 2 - 20) + ")"; });
+
+svg.selectAll(".year-label")
+    .append("text")
+    .text(function (d) { return new Date(d.date).getFullYear(); })
+    .attr("text-anchor", "middle")
+    .attr("font-size", "12px")
+    .attr("fill", "#999");
+

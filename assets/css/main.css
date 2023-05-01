@@ -11745,6 +11745,15 @@ h2 {
   transition: all 0.5s ease-in-out;
 }
 
+.timeline-svg .thumbnail:hover image {
+  transform: scale(5);
+}
+
+.timeline-svg:hover .thumbnail:hover image {
+  z-index: 1;
+  opacity: 0.8;
+}
+
 nav * {
   font-family: "Nunito", sans-serif;
 }
