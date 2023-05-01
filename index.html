@@ -36,12 +36,39 @@
             onclick="document.getElementById('goals-container').classList.remove('show')">
             <i class="fa-regular fa-circle-xmark"></i>
         </label>
-
+        
         <div class="goals-container__content">
             <div class="goals-container__header">
+                
+                <!-- D3 TIMELINE BUTTON TRIGGER MODAL -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dThreeTimeline">
+                    Launch static backdrop modal
+                </button>
+
                 <h3>Ultimately, I would love to become a multi-millionaire.</h3> 
                 <h4>But until then I'm happy with : </h4>
             </div>
+            
+            <!-- START D3 TIMELINE MODAL -->
+            <div class="modal fade" id="dThreeTimeline" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="dThreeTimelineLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="dThreeTimelineLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body dthree-body">
+                            <div id="timeline"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Understood</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Start goal grid section -->
             <div class="goals__grid">
                 <!-- Start health goal card -->
@@ -510,6 +537,8 @@
         <i class="fas fa-chevron-up"></i>
     </a>
 
+    <!-- d3 CDN -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap v5.3.0-alpha1 JS-->

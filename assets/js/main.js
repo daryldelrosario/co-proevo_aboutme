@@ -381,3 +381,83 @@ fname.on("input", () => removeFocusedStyle(0, fname));
 lname.on("input", () => removeFocusedStyle(1, lname));
 email.on("input", () => removeFocusedStyle(2, email));
 message.on("input", () => removeFocusedStyle(3, message));
+
+// ============================
+// FOR D3 TIMELINE - PROJECT 12
+// ============================
+// DOM ELEMENT STYLING
+const modalBody = $(".dthree-body");
+modalBody.css({
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center",
+});
+
+// Define the data for the timeline
+var data = [
+    { date: "1990-01-01", event: "Birth", thumbnail: "img/baby.jpg" },
+    { date: "2008-09-01", event: "Started high school", thumbnail: "img/highschool.jpg" },
+    { date: "2012-06-01", event: "Graduated high school", thumbnail: "img/graduation.jpg" },
+    { date: "2016-06-01", event: "Graduated college", thumbnail: "img/college.jpg" },
+    { date: "2020-01-01", event: "Started working at Company X", thumbnail: "img/job.jpg" }
+  ];
+  
+  // Define the dimensions and margins of the visualization
+  var margin = { top: 50, right: 30, bottom: 30, left: 60 };
+  var width = 600 - margin.left - margin.right;
+  var height = 200 - margin.top - margin.bottom;
+  
+  // Parse the date/time values
+  var parseTime = d3.timeParse("%Y-%m-%d");
+  
+  // Create the x-scale for the timeline
+  var x = d3.scaleTime()
+    .domain([parseTime("1990-01-01"), new Date()])
+    .range([0, width]);
+  
+  // Create the SVG container for the visualization
+  var svg = d3.select("#timeline")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  
+  // Add the timeline axis
+  svg.append("g")
+    .attr("transform", "translate(0," + height / 2 + ")")
+    .call(d3.axisBottom(x)
+      .tickSize(0)
+      .tickPadding(10));
+  
+  // Add the timeline events and thumbnails
+  svg.selectAll(".event")
+    .data(data)
+    .enter().append("g")
+    .attr("class", "event")
+    .attr("transform", function(d) { return "translate(" + x(parseTime(d.date)) + "," + height / 2 + ")"; })
+    .append("circle")
+    .attr("r", 5)
+    .attr("fill", "#333")
+    .on("mouseover", function(d) {
+      // Add tooltip or other interactive behavior here
+    })
+    .on("mouseout", function(d) {
+      // Remove tooltip or other interactive behavior here
+    });
+  
+  svg.selectAll(".thumbnail")
+    .data(data)
+    .enter().append("g")
+    .attr("class", "thumbnail")
+    .attr("transform", function(d) { return "translate(" + x(parseTime(d.date)) + "," + (height / 2 + 20) + ")"; })
+    .append("image")
+    .attr("xlink:href", function(d) { return d.thumbnail; })
+    .attr("width", 30)
+    .attr("height", 30)
+    .on("mouseover", function(d) {
+      // Add tooltip or other interactive behavior here
+    })
+    .on("mouseout", function(d) {
+      // Remove tooltip or other interactive behavior here
+    });
