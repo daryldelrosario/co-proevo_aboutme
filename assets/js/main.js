@@ -394,12 +394,15 @@ modalBody.css({
 });
 
 // Define the data for the timeline
+// Define the data for the timeline
 var data = [
-    { date: "1990-01-01", event: "Birth", thumbnail: "img/baby.jpg" },
-    { date: "2008-09-01", event: "Started high school", thumbnail: "img/highschool.jpg" },
-    { date: "2012-06-01", event: "Graduated high school", thumbnail: "img/graduation.jpg" },
-    { date: "2016-06-01", event: "Graduated college", thumbnail: "img/college.jpg" },
-    { date: "2020-01-01", event: "Started working at Company X", thumbnail: "img/job.jpg" }
+    { date: "1986-12-04", event: "Birth", thumbnail: "assets/img/1986_mom.jpg" },
+  { date: "1987-12-04", event: "First birthday", thumbnail: "assets/img/1987_dad.jpg" },
+  { date: "1992-03-11", event: "Brother's birth", thumbnail: "assets/img/1992_brother.jpg" },
+  { date: "2007-09-04", event: "DNA first meet", thumbnail: "assets/img/2007_dna.jpg" },
+  { date: "2010-06-01", event: "Philippines", thumbnail: "assets/img/2010_lola.jpg" },
+  { date: "2017-07-03", event: "DNA wedding", thumbnail: "assets/img/2017_dna.jpg" },
+  { date: "2021-11-24", event: "Birth of first son", thumbnail: "assets/img/2021_cad.jpg" }
   ];
   
   // Define the dimensions and margins of the visualization
@@ -412,7 +415,7 @@ var data = [
   
   // Create the x-scale for the timeline
   var x = d3.scaleTime()
-    .domain([parseTime("1990-01-01"), new Date()])
+    .domain([parseTime("1986-12-04"), new Date()])
     .range([0, width]);
   
   // Create the SVG container for the visualization
@@ -461,3 +464,6 @@ var data = [
     .on("mouseout", function(d) {
       // Remove tooltip or other interactive behavior here
     });
+  
+  
+  
