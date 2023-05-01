@@ -1,4 +1,4 @@
-# CO Project Eleven - About Me Page
+# CO Project Twelve - About Me Page
 This about me page is an evolving project that started with only HTML. Then we learnt, designed and applied CSS, SCSS and now JavaScript. Each version has been documented in the `Release` Section at the bottom of this readme file. Directly below is the current live demo.
 
 ## <a href="https://daryldelrosario.github.io/co-proevo_aboutme/">Current Live Demo</a>
@@ -6,6 +6,8 @@ This about me page is an evolving project that started with only HTML. Then we l
 <kbd><img src="./assets/vid/pro-eleven_ld.gif" alt="live demo gif of up to date project">
 
 ## Features
+- From Project Twelve:
+    - Refactor all JavaScript into jQuery
 - From Project Eleven: 
     - Includes contact form with HTML and JavaScript validations
     - Contact form pops up as a modal
@@ -54,6 +56,15 @@ npm run compile:sass
 Feel free to modify or add your own script to compile sass inside the <code>package.json</code> file
 
 ## Releases
+<details>
+    <summary>v1.4.1 - Apr 30 2023</summary>
+
+- Project Twelve:
+    - Extension from v1.4.0
+    - Required one new implementation of javascript
+        - refactored javascript to jquery
+</details>
+
 <details>
     <summary>v1.4.0 - Apr 27 2023</summary>
 
