@@ -138,20 +138,22 @@
 
     <!-- START LIST SORTER SECTION -->
     <section id="list-sorter" class="list-sorter">
+        <h2>Project Thirteen: List Sorter</h2>
+        <div class="heading-line move-header"></div>
+
         <div class="list-sorter__content">
             <!-- INPUT FORM FOR BASIC CONTACT INFO -->
             <div class="list-sorter__form-container">
                 <form id="list-sorter-form" class="list-sorter__form">
                     <label for="firstName">First Name: </label>
                     <input type="text" id="firstName" name="firstName">
-    
-                     <label for="lastName">Last Name: </label>
+
+                    <label for="lastName">Last Name: </label>
                     <input type="text" id="lastName" name="lastName">
-    
-                    <label for="age">Age</label>
+
+                    <label for="age">Age: </label>
                     <input type="number" id="age" name="age">
-    
-                    <input type="button" value="submit" onclick="addRow()">
+                    <input type="button" value="Add Row" class="btn btn-primary" onclick="addRow()"> 
                 </form>
             </div>
 
@@ -162,17 +164,14 @@
                         <tr>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Birthday</th>
+                            <th>Age</th>
                         </tr>
                     </thead>
                     <tbody></tbody>
                 </table>
             </div>
-            
-            
         </div>
-
-    
+        
     </section>
 
     <!-- START FOOTER SECTION -->
