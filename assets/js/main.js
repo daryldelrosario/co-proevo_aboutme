@@ -385,6 +385,24 @@ message.on("input", () => removeFocusedStyle(3, message));
 // ============================
 // FOR LIST SORTER - PROJECT 13
 // ============================
+// INTERACTION: HIDDEN EXTRAS BUTTON IN GOALS SECTION OVERLAY
+const hiddenText = $(".btn-extra__hidden");
+const extrasText = $(".btn-extra__extras");
+
+$(".btn-extra").hover(
+    function() {
+        hiddenText.fadeOut(100, function() {
+            extrasText.fadeIn(100);
+        });
+    },
+    function() {
+        extrasText.fadeOut(100, function() {
+            hiddenText.fadeIn(100);
+        });
+    }
+);
+
+
 // SETTING UP THE TABLE WITH PRESET DATA
 // FUNCTION: PRESET ROW
 function presetRow(fname, lname, age) {
@@ -392,6 +410,7 @@ function presetRow(fname, lname, age) {
     const fnameCell = $("<td>").text(fname);
     const lnameCell = $("<td>").text(lname);
     const ageCell = $("<td>").text(age);
+    ageCell.css("text-align", "right");
     row.append(fnameCell, lnameCell, ageCell);
 
     $("#list-sorter-table tbody").append(row);
@@ -422,6 +441,11 @@ function addRow() {
     $("#firstName").val("");
     $("#lastName").val("");
     $("#age").val("");
+}
+
+// FUNCTION: CLEAR TABLE
+function clearTable() {
+    $("#list-sorter-table tbody tr:not(:first-child)").remove();
 }
 
 // CREATING SORTING FUNCTION sortTable(a, b, c)

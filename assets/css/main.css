@@ -11618,7 +11618,7 @@ textarea.form-control-lg {
   align-items: center;
 }
 
-.breakme, .goals-container, .goals-container__header .btn-extra, .goals-container__header .btn-extra__text, .goals__icon i, .achievements__item, .achievements__item-overlay, .hobb-n-exp__content, header .about-me::after, header .about-me__content-container {
+.breakme, .goals-container, .goals-container__header .btn-extra, .goals__icon i, .btn-extra__hidden, .btn-extra__extras, .achievements__item, .achievements__item-overlay, .hobb-n-exp__content, header .about-me::after, header .about-me__content-container {
   transition: all 0.5s ease-in-out;
 }
 
@@ -12188,15 +12188,11 @@ header svg {
   background-color: transparent;
   width: 100px;
 }
-.goals-container__header .btn-extra__text {
+.goals-container__header .btn-extra__hidden, .goals-container__header .btn-extra__extras {
   color: white;
-  opacity: 0;
 }
 .goals-container__header .btn-extra:hover {
   box-shadow: 0 0 22px rgba(255, 255, 255, 0.99);
-}
-.goals-container__header .btn-extra:hover .btn-extra__text {
-  opacity: 1;
 }
 @media (max-width: 767.98px) {
   .goals-container__header {
@@ -12313,6 +12309,14 @@ header svg {
     flex: stretch;
   }
 }
+.btn-extra__hidden {
+  opacity: 0.2;
+}
+
+.btn-extra__extras {
+  display: none;
+}
+
 .footer {
   font-size: 1.43rem;
   background-color: #000;
@@ -12436,7 +12440,8 @@ header svg {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  margin-top: 77px;
 }
 .list-sorter__content {
   margin: 2rem;
@@ -12451,10 +12456,12 @@ header svg {
 .list-sorter__form {
   text-align: center;
 }
-.list-sorter__form input {
+.list-sorter__form input[type=text],
+.list-sorter__form input[type=number] {
   margin: 0 1rem 0 0;
   border-radius: 7px;
   padding: 3px;
+  border: 1px solid lightgrey;
 }
 .list-sorter__form input[type=number]::-webkit-inner-spin-button,
 .list-sorter__form input[type=number]::-webkit-outer-spin-button {
@@ -12462,17 +12469,25 @@ header svg {
   margin: 0;
 }
 .list-sorter__table-container {
-  width: 100%;
+  width: 86%;
   margin: 2rem;
 }
 .list-sorter__table-container .list-sorter__table {
   table-layout: fixed;
+  border-collapse: collapse;
   width: 100%;
+}
+.list-sorter__table-container .list-sorter__table thead {
+  background-color: gray;
 }
 .list-sorter__table-container .list-sorter__table th, .list-sorter__table-container .list-sorter__table td {
   width: 33.33%;
   padding: 10px;
+  border: 1px solid #000;
 }
 .list-sorter__table-container .list-sorter__table th {
   text-align: center;
+}
+.list-sorter__table-container .list-sorter__table tr:nth-child(even) {
+  background-color: lightgray;
 }

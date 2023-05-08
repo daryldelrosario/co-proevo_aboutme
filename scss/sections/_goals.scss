@@ -60,19 +60,14 @@
             background-color: transparent;
             width: 100px;
             @extend %transition;
-            
-            &__text {
+
+            &__hidden,
+            &__extras {
                 color: white;
-                opacity: 0;
-                @extend %transition;
             }
 
             &:hover {
                 box-shadow: 0 0 22px rgba($white, 0.99);
-
-                .btn-extra__text {
-                    opacity: 1;
-                }
             }
         }
 
@@ -218,4 +213,14 @@
             flex: stretch;
         }
     }
+}
+
+.btn-extra__hidden {
+    opacity: 0.2;
+    @extend %transition;
+}
+
+.btn-extra__extras {
+    display: none;
+    @extend %transition;
 }
