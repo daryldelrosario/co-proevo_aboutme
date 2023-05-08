@@ -12415,3 +12415,7 @@ header svg {
 #start-modal-btn .main-volume i {
   color: #fff;
 }
+
+#extras {
+  height: 100vh;
+}
