@@ -54,6 +54,28 @@
         text-align: center;
         padding: 3rem;
 
+        .btn-extra {
+            margin: 1rem;
+            box-shadow: 0 0 11px rgba($white, 0.33);
+            background-color: transparent;
+            width: 100px;
+            @extend %transition;
+            
+            &__text {
+                color: white;
+                opacity: 0;
+                @extend %transition;
+            }
+
+            &:hover {
+                box-shadow: 0 0 22px rgba($white, 0.99);
+
+                .btn-extra__text {
+                    opacity: 1;
+                }
+            }
+        }
+
         @include media-breakpoint-down(md) {
             padding: 2rem;
         }

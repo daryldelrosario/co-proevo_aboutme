@@ -86,7 +86,7 @@
                         <a class="nav-link" href="./index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#d">Extras</a>
+                        <a class="nav-link" href="#">Extras</a>
                     </li>
                     <li class="nav-item toggle-me">
                         <label for="music-toggle" id="show-player-btn" onclick="document.getElementById('music-container').classList.add('show')">
@@ -136,10 +136,43 @@
         </div>
     </nav>
 
-    <!-- START EXTRAS SECTION -->
-    <section id="extras">
-        <div id="extras-link"></div>
-        Hello world
+    <!-- START LIST SORTER SECTION -->
+    <section id="list-sorter" class="list-sorter">
+        <div class="list-sorter__content">
+            <!-- INPUT FORM FOR BASIC CONTACT INFO -->
+            <div class="list-sorter__form-container">
+                <form id="list-sorter-form" class="list-sorter__form">
+                    <label for="firstName">First Name: </label>
+                    <input type="text" id="firstName" name="firstName">
+    
+                     <label for="lastName">Last Name: </label>
+                    <input type="text" id="lastName" name="lastName">
+    
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age">
+    
+                    <input type="button" value="submit" onclick="addRow()">
+                </form>
+            </div>
+
+            <!-- TABLE OF DATA FROM INPUT FORM -->
+            <div class="list-sorter__table-container">
+                <table id="list-sorter-table" class="list-sorter__table">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            
+            
+        </div>
+
+    
     </section>
 
     <!-- START FOOTER SECTION -->

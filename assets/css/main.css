@@ -11618,7 +11618,7 @@ textarea.form-control-lg {
   align-items: center;
 }
 
-.breakme, .goals-container, .goals__icon i, .achievements__item, .achievements__item-overlay, .hobb-n-exp__content, header .about-me::after, header .about-me__content-container {
+.breakme, .goals-container, .goals-container__header .btn-extra, .goals-container__header .btn-extra__text, .goals__icon i, .achievements__item, .achievements__item-overlay, .hobb-n-exp__content, header .about-me::after, header .about-me__content-container {
   transition: all 0.5s ease-in-out;
 }
 
@@ -12182,6 +12182,22 @@ header svg {
   text-align: center;
   padding: 3rem;
 }
+.goals-container__header .btn-extra {
+  margin: 1rem;
+  box-shadow: 0 0 11px rgba(255, 255, 255, 0.33);
+  background-color: transparent;
+  width: 100px;
+}
+.goals-container__header .btn-extra__text {
+  color: white;
+  opacity: 0;
+}
+.goals-container__header .btn-extra:hover {
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.99);
+}
+.goals-container__header .btn-extra:hover .btn-extra__text {
+  opacity: 1;
+}
 @media (max-width: 767.98px) {
   .goals-container__header {
     padding: 2rem;
@@ -12416,6 +12432,8 @@ header svg {
   color: #fff;
 }
 
-#extras {
-  height: 100vh;
+#list-sorter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
