@@ -441,6 +441,18 @@ function addRow() {
     const lastName = $("#lastName").val();
     const age = $("#age").val();
 
+    if(firstName.trim() === "" || lastName.trim() === "" || age.trim() === "") {
+        alert("Please fill out all fields and try again.");
+        $("#firstName").focus();
+        return;
+    }
+
+    if(isNaN(age) ) {
+        alert("Age must be a number. Please try again.");
+        $("#age").focus();
+        return;
+    }
+
     const row = $("<tr>");
     const fNameCell = $("<td>").text(firstName);
     const lNameCell = $("<td>").text(lastName);
