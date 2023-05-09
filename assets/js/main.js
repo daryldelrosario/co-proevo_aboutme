@@ -142,6 +142,10 @@ function darkMode(){
             "--bs-btn-hover-bg": primary,
         });
     }
+
+    const clearBtn = $("#list-sorter-form input[value='Clear']");
+
+    clearBtn.toggleClass("btn-outline-danger btn-danger");
 }
 
 $(darkModeToggle).click(darkMode);
@@ -402,7 +406,6 @@ $(".btn-extra").hover(
     }
 );
 
-
 // SETTING UP THE TABLE WITH PRESET DATA
 // FUNCTION: PRESET ROW
 function presetRow(fname, lname, age) {
@@ -424,6 +427,14 @@ presetRow("Aqua", "Man", 10);
 presetRow("Cat", "Woman", 2);
 presetRow("Hello", "World", 20);
 
+// FUNCTION: DEFAULT THE ARROW ICONS
+function defaultArrows() {
+    $("#list-sorter-table th").each(function() {
+        $(this).attr("data-order", "none");
+        $(this).find(".fas").attr("class", "fas fa-sort");
+    });
+}
+
 // FUNCTION: ADD ROW
 function addRow() {
     const firstName = $("#firstName").val();
@@ -441,11 +452,14 @@ function addRow() {
     $("#firstName").val("");
     $("#lastName").val("");
     $("#age").val("");
+
+    defaultArrows();
 }
 
 // FUNCTION: CLEAR TABLE
 function clearTable() {
-    $("#list-sorter-table tbody tr:not(:first-child)").remove();
+    $("#list-sorter-table tbody tr").remove();
+    defaultArrows();
 }
 
 // CREATING SORTING FUNCTION sortTable(a, b, c)
@@ -462,12 +476,18 @@ function sortTable(table, columnIndex, isNumeric) {
         }
     });
 
-    const currentOrder = $(table.find("th").get(columnIndex)).attr("data-order");
+    const th = table.find("th").get(columnIndex);
+    const currentOrder = $(th).attr("data-order");
+
+    $(th).find("i").remove();
+
     if(currentOrder === "asc") {
         rows.reverse();
-        $(table.find("th").get(columnIndex)).attr("data-order", "desc");
+        $(th).attr("data-order", "desc");
+        $(th).append("<i class='fas fa-sort-down'></i>");
     } else {
-        $(table.find("th").get(columnIndex)).attr("data-order", "asc");
+        $(th).attr("data-order", "asc");
+        $(th).append("<i class='fas fa-sort-up'></i>");
     }
 
     $.each(rows, function(index, row) {
