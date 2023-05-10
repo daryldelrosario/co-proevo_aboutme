@@ -3,9 +3,11 @@ This about me page is an evolving project that started with only HTML. Then we l
 
 ## <a href="https://daryldelrosario.github.io/co-proevo_aboutme/">Current Live Demo</a>
 
-<kbd><img src="./assets/vid/pro-eleven_ld.gif" alt="live demo gif of up to date project">
+<kbd><img src="./assets/vid/prothirteen_ld.gif" alt="live demo gif of up to date project">
 
 ## Features
+- From Project Thirteen: 
+    - Includes List Sorter using JavaScript .sort()
 - From Project Twelve:
     - Refactor all JavaScript into jQuery
 - From Project Eleven: 
@@ -56,6 +58,18 @@ npm run compile:sass
 Feel free to modify or add your own script to compile sass inside the <code>package.json</code> file
 
 ## Releases
+<details>
+    <summary>v1.5.0 - May 10 2023</summary>
+
+- Project Thirteen:
+    - Extension from v.1.4.1
+    - Required a list-sorter with:
+        - input box
+        - submit button
+        - output the sorted list in some way
+    - Check full release details <a href="">here</a>
+</details>
+
 <details>
     <summary>v1.4.1 - Apr 30 2023</summary>
 
