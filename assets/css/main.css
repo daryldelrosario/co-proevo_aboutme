@@ -12489,7 +12489,7 @@ header svg {
   text-align: center;
 }
 .list-sorter__table-container .list-sorter__table tr:nth-child(even) {
-  background-color: lightgray;
+  background-color: darkgray;
 }
 .list-sorter__table-container .list-sorter__table i {
   margin: 7px;
