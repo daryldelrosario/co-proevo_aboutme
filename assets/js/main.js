@@ -465,6 +465,7 @@ function addRow() {
     const fNameCell = $("<td>").text(firstName);
     const lNameCell = $("<td>").text(lastName);
     const ageCell = $("<td>").text(age);
+    ageCell.css("text-align", "right");
     row.append(fNameCell, lNameCell, ageCell);
 
     $("#list-sorter-table tbody").append(row);
