@@ -59,7 +59,7 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
 
 ## Releases
 <details>
-    <summary>v1.5.0 - May 10 2023</summary>
+    <summary>v1.5.1 - May 10 2023</summary>
 
 - Project Thirteen:
     - Extension from v.1.4.1
@@ -67,7 +67,7 @@ Feel free to modify or add your own script to compile sass inside the <code>pack
         - input box
         - submit button
         - output the sorted list in some way
-    - Check full release details <a href="">here</a>
+    - Check full release details <a href="https://github.com/daryldelrosario/co-proevo_aboutme/releases/tag/v1.5.1">here</a>
 </details>
 
 <details>
