@@ -389,7 +389,7 @@ message.on("input", () => removeFocusedStyle(3, message));
 // ============================
 // FOR LIST SORTER - PROJECT 13
 // ============================
-// INTERACTION: HIDDEN EXTRAS BUTTON IN GOALS SECTION OVERLAY
+// Creating the button to link from goal-overlay to extras.html
 const hiddenText = $(".btn-extra__hidden");
 const extrasText = $(".btn-extra__extras");
 
@@ -406,8 +406,8 @@ $(".btn-extra").hover(
     }
 );
 
-// SETTING UP THE TABLE WITH PRESET DATA
-// FUNCTION: PRESET ROW
+// Setting up the table with preset data
+// HELPER FUNCTION: PRESET ROW
 function presetRow(fname, lname, age) {
     const row = $("<tr>");
     const fnameCell = $("<td>").text(fname);
@@ -427,13 +427,21 @@ presetRow("Aqua", "Man", 10);
 presetRow("Cat", "Woman", 2);
 presetRow("Hello", "World", 20);
 
-// FUNCTION: DEFAULT THE ARROW ICONS
+// HELPER FUNCTION: DEFAULT THE ARROW ICONS
 function defaultArrows() {
     $("#list-sorter-table th").each(function() {
         $(this).attr("data-order", "none");
-        $(this).find(".fas").attr("class", "fas fa-sort");
+        $(this).find(".fas").attr("class", "fas fa-sort sort-arrow");
     });
 }
+
+// HELPER FUNCTION: ADD HOVER EFFECT ON ARROW ICONS
+const arrows = $(".fa-sort");
+function addHoverEffect(element) {
+    element.addClass("sort-arrow");
+}
+
+addHoverEffect(arrows);
 
 // FUNCTION: ADD ROW
 function addRow() {
@@ -472,9 +480,13 @@ function addRow() {
 function clearTable() {
     $("#list-sorter-table tbody tr").remove();
     defaultArrows();
+
+    $("#firstName").val("");
+    $("#lastName").val("");
+    $("#age").val("");
 }
 
-// CREATING SORTING FUNCTION sortTable(a, b, c)
+// Creating sorting function sortTable(a, b, c)
 // FUNCTION: SORT TABLE 
 function sortTable(table, columnIndex, isNumeric) {
     const rows = table.find("tbody > tr").get();
@@ -505,6 +517,9 @@ function sortTable(table, columnIndex, isNumeric) {
     $.each(rows, function(index, row) {
         table.children("tbody").append(row);
     });
+
+    const arrows = table.find("th i");
+    addHoverEffect(arrows);
 }
 
 // Adding click event handlers to the table headers for sorting 

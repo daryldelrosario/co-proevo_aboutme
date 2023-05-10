@@ -12491,3 +12491,10 @@ header svg {
 .list-sorter__table-container .list-sorter__table tr:nth-child(even) {
   background-color: lightgray;
 }
+.list-sorter__table-container .list-sorter__table i {
+  margin: 7px;
+}
+
+.sort-arrow:hover {
+  cursor: pointer;
+}
